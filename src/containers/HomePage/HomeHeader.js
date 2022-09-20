@@ -32,7 +32,7 @@ class HomeHeader extends Component {
                                 </div>
                                 <div className='content-item'>
                                     <i className='fa fa-phone'></i>
-                                    <div className='text-item'>0123456895</div>
+                                    <div className='text-item'>0123456894</div>
                                 </div>
                                 <div className='content-item'>
                                     <i className='fa fa-registered'></i>
