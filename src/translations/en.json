@@ -1,4 +1,14 @@
 {
+    "homeheader": {
+        "homepage": "Home page",
+        "onlinemedica": "Online medical examination",
+        "forum": "Health Forum",
+        "healthnews": "Health News",
+        "contact": "Contact",
+        "register": "Register",
+        "title1": "MEDICAL BACKGROUND",
+        "title2": "COMPREHENSIVE HEALTH CARE"
+    },
     "common": {
         "add": "Add",
         "edit": "Edit",

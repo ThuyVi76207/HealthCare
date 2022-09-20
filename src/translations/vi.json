@@ -1,4 +1,14 @@
 {
+    "homeheader": {
+        "homepage": "Trang chủ",
+        "onlinemedica": "Khám online",
+        "forum": "Diễn đàn sức khỏe",
+        "healthnews": "Tin tức sức khỏe",
+        "contact": "Liên hệ",
+        "register": "Đăng ký",
+        "title1": "NỀN TẢNG Y TẾ",
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",
