@@ -82,7 +82,7 @@ class UserManage extends Component {
     modalEditUser = async (user) => {
         try {
             let res = await editUserService(user);
-            if (res && res.errCode == 0) {
+            if (res && res.errCode === 0) {
                 this.setState({
                     isOpenModalEditUser: false
                 })
