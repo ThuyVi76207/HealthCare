@@ -7,7 +7,18 @@
         "contact": "Contact",
         "register": "Register",
         "title1": "MEDICAL BACKGROUND",
-        "title2": "COMPREHENSIVE HEALTH CARE"
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "specialties": "Popular specialties",
+        "see": "SEE MORE",
+        "musculoskeletal": "Muscle Skeletal Joint",
+        "mentality":"Counseling and psychotherapy",
+        "dermatology":"Dermatology",
+        "covid":"Consulting F0 Covid-19",
+        "mental":"Mental health",
+        "digest":"Digest",
+        "medical":"Medical",
+        "pediatric":"Pediatrics",
+        "doctors":"Outstanding Doctors"
     },
     "common": {
         "add": "Add",

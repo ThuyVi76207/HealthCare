@@ -7,7 +7,18 @@
         "contact": "Liên hệ",
         "register": "Đăng ký",
         "title1": "NỀN TẢNG Y TẾ",
-        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN"
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "specialties": "Chuyên khoa phổ biến",
+        "see": "XEM THÊM",
+        "musculoskeletal":"Cơ Xương Khớp",
+        "mentality":"Tư vấn, trị liệu tâm lý",
+        "dermatology":"Da liễu",
+        "covid":"Tư vấn F0 Covid-19",
+        "mental":"Sức khỏe tâm thần",
+        "digest":"Tiêu hóa",
+        "medical":"Nội khoa",
+        "pediatric":"Nhi khoa",
+        "doctors":"Các bác sĩ nổi bật"
     },
     "common": {
         "add": "Thêm",
