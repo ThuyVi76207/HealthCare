@@ -24,5 +24,16 @@ const deleteUserService = (id) => {
     });
 }
 
+const getSettingService = (type) => {
+    return axios.get(`/api/settings?type=${type}`)
+}
 
-export { handleLoginApi, getAllUsers, createNewUser, deleteUserService, editUserService }
+
+export {
+    handleLoginApi,
+    getAllUsers,
+    createNewUser,
+    deleteUserService,
+    editUserService,
+    getSettingService
+}

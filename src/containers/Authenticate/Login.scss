@@ -1,6 +1,9 @@
 .login-background {
     background-image: linear-gradient(to right, #055bdc, #0083eb, #47a7f2, #85c9f5, #c5e8f9);
     height: 100vh;
+    color: #333;
+    //font-size: 62.5%;
+    font-family: "Open Sans", sans-serif;
 
     .login-content {
         min-height: 100vh;
@@ -51,7 +54,7 @@
                     font-weight: 700;
                     padding-bottom: 6px;
                     line-height: 1.8rem;
-                    font-size: 1.4rem;
+                    font-size: 1.0rem;
                 }
 
                 .input-password {
@@ -81,7 +84,7 @@
                     border: 1px solid #b3b3b3;
                     border-radius: 3px;
                     outline: none;
-                    font-size: 1.4rem;
+                    font-size: 1.0rem;
                 }
 
                 .form-control:hover {
@@ -145,11 +148,11 @@
     }
 }
 
-html {
-    color: #333;
-    font-size: 62.5%;
-    font-family: "Open Sans", sans-serif;
-}
+// html {
+//     color: #333;
+//     font-size: 62.5%;
+//     font-family: "Open Sans", sans-serif;
+// }
 
 .form-group.invalid .form-control {
     border-color: #f33a58;
