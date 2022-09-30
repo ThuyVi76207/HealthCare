@@ -42,16 +42,16 @@ class App extends Component {
     }
 
     render() {
-        
+
         return (
             <Fragment>
                 <Router history={history}>
                     <div className="main-container">
 
-                        {this.props.isLoggedIn && <Header />}
+                        {/* {this.props.isLoggedIn && <Header />} */}
 
                         <div className="content-container">
-                            <CustomScrollbars style={{height: "720px", width: "100%"}}>
+                            <CustomScrollbars style={{ height: "720px", width: "100%" }}>
                                 <Switch>
                                     <Route path={path.HOME} exact component={(Home)} />
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
