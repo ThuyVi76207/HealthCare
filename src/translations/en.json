@@ -6,9 +6,21 @@
         "healthnews": "Health News",
         "contact": "Contact",
         "register": "Register",
+        "login": "Login",
         "title1": "MEDICAL BACKGROUND",
         "title2": "COMPREHENSIVE HEALTH CARE",
-        "welcome": "Welcome"
+        "welcome": "Welcome",
+        "specialties": "Popular specialties",
+        "see": "SEE MORE",
+        "musculoskeletal": "Muscle Skeletal Joint",
+        "mentality":"Counseling and psychotherapy",
+        "dermatology":"Dermatology",
+        "covid":"Consulting F0 Covid-19",
+        "mental":"Mental health",
+        "digest":"Digest",
+        "medical":"Medical",
+        "pediatric":"Pediatrics",
+        "doctors":"Outstanding Doctors"
     },
     "menu": {
         "admin": {
