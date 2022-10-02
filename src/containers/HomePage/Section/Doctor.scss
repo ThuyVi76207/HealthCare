@@ -1,10 +1,10 @@
 .section-doctor {
-    height: 410px;
+    height: 480px;
     background: #fff;
 
     scrollbar-gutter: var(--gutter, auto);
 
-    .doctor-container {
+    .share-container {
         margin: 0 80px;
         display: flex;
         flex-direction: column;
@@ -13,11 +13,11 @@
             display: flex;
             height: 50px;
             justify-content: space-between;
-            margin: 0 15px;
+            margin: 45px 15px 25px 15px;
 
 
             .tilte-spec {
-                font-size: 3rem;
+                font-size: 2.5rem;
                 font-weight: 600;
                 color: #363636;
             }
@@ -26,12 +26,11 @@
         .doctor-customize {
             width: 100%;
             display: inline-block;
-            height: 224px;
+            height: 295px;
             border: 1px solid #d5d9d7;
             padding: 20px 0;
             .text-doctor {
                 text-align: center;
-                font-size: 1.5rem;
                 margin: 10px 0;
             }
         }
