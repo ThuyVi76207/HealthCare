@@ -8,7 +8,7 @@ const getAllUsers = (id) => {
     return axios.get(`/api/get-all-users?id=${id}`)
 }
 
-const createNewUser = (data) => {
+const createNewUserService = (data) => {
     return axios.post('/api/create-users', data)
 }
 
@@ -32,7 +32,7 @@ const getSettingService = (type) => {
 export {
     handleLoginApi,
     getAllUsers,
-    createNewUser,
+    createNewUserService,
     deleteUserService,
     editUserService,
     getSettingService

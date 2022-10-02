@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss'
-import { getAllUsers, createNewUser, deleteUserService, editUserService } from '../../services/userService';
+import { getAllUsers, createNewUserService, deleteUserService, editUserService } from '../../services/userService';
 import ModelUser from './ModelUser';
 import ModelEditUser from './ModelEditUser';
 import { emitter } from "../../utils/emitter";
@@ -39,7 +39,7 @@ class UserManage extends Component {
 
     createUser = async (data) => {
         try {
-            let response = await createNewUser(data);
+            let response = await createNewUserService(data);
             console.log(response)
             if (response && response.errCode !== 0) {
                 alert(response.message)
@@ -117,7 +117,7 @@ class UserManage extends Component {
                 <ModelUser
                     isOpen={this.state.isOpenModalUser}
                     toggleUserModal={this.toggleUserModal}
-                    createNewUser={this.createUser}
+                    createNewUserService={this.createUser}
                 />
                 {
                     <ModelEditUser

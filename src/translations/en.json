@@ -37,7 +37,7 @@
         "position": "Position",
         "roleId": "Role ID",
         "image": "Avatar",
-        "save": "Save",
+        "save": "Save user",
         "upload-image": "Upload Image "
     }
 }

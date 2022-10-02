@@ -66,7 +66,7 @@ class ModelUser extends Component {
     handleAddNewUser = () => {
         let isValid = this.checkValidateInput();
         if (isValid === true) {
-            this.props.createNewUser(this.state);
+            this.props.createNewUserService(this.state);
         }
     }
 
