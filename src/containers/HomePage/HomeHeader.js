@@ -7,7 +7,7 @@ import { LANGUAGES } from "../../utils";
 import BgImg from "../../assets/img_background.jpg";
 
 import { changeLanguageApp } from "../../store/actions"
-import Navbar from './Navbar/Navbar';
+import Navbar from '../Navbar/Navbar';
 
 class HomeHeader extends Component {
 
@@ -27,7 +27,7 @@ class HomeHeader extends Component {
                 </div>
 
                 <div className='nav-bar'>
-                    <Navbar />
+                    
                     <div className='change-language'>
                         <div className={language === LANGUAGES.VI ? 'language-vi action' : 'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN /</span></div>
                         <div className={language === LANGUAGES.EN ? 'language-en action' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>

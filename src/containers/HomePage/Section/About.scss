@@ -1,0 +1,15 @@
+.bg-about {
+    background: url("../../../assets/bg-homepage/bg1.svg");
+    max-width: 100%;
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .content-about-left {
+        margin: auto;
+        width: 50%;
+    }
+    .content-about-right {
+        width: 45%;
+    }
+}

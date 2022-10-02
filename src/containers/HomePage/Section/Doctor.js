@@ -28,7 +28,7 @@ class Doctor extends Component {
     render() {
         let settings = {
             dots: false,
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 4,
@@ -38,7 +38,7 @@ class Doctor extends Component {
 
         return (
             <div className='section-doctor'>
-                <div className='doctor-container'>
+                <div className='share-container'>
                     <div className='doctor-header my-5'>
                         <span className='tilte-spec text-center'><FormattedMessage id="homeheader.doctors" /></span>
                         <button className='text-center bg-zinc-300 p-2'><FormattedMessage id="homeheader.see" /></button>
