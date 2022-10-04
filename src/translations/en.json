@@ -7,20 +7,20 @@
         "contact": "Contact",
         "register": "Register",
         "login": "Login",
-        "title1": "MEDICAL BACKGROUND",
+        "title1": "MEDICAL PLATFORM",
         "title2": "COMPREHENSIVE HEALTH CARE",
         "welcome": "Welcome",
         "specialties": "Popular specialties",
         "see": "SEE MORE",
         "musculoskeletal": "Muscle Skeletal Joint",
-        "mentality":"Counseling and psychotherapy",
-        "dermatology":"Dermatology",
-        "covid":"Consulting F0 Covid-19",
-        "mental":"Mental health",
-        "digest":"Digest",
-        "medical":"Medical",
-        "pediatric":"Pediatrics",
-        "doctors":"Outstanding Doctors"
+        "mentality": "Counseling and psychotherapy",
+        "dermatology": "Dermatology",
+        "covid": "Consulting F0 Covid-19",
+        "mental": "Mental health",
+        "digest": "Digest",
+        "medical": "Medical",
+        "pediatric": "Pediatrics",
+        "doctors": "Outstanding Doctors"
     },
     "menu": {
         "admin": {
@@ -38,7 +38,7 @@
         }
     },
     "manage-user": {
-        "add": "Create a new user",
+        "add": "CREATE A NEW USER",
         "email": "Email",
         "password": "Password",
         "firstName": "First Name",
@@ -50,6 +50,7 @@
         "roleId": "Role ID",
         "image": "Avatar",
         "save": "Save user",
-        "upload-image": "Upload Image "
+        "upload-image": "Upload Image ",
+        "edit": "Save changes"
     }
 }
