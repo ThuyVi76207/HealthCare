@@ -99,7 +99,7 @@ class Login extends Component {
                                 <span className="col-12 error" style={{ color: 'red' }}>{this.state.errMessage}</span>
                             </div>
 
-                            <div className="col-4">
+                            <div className="forgot-password col-4">
                                 <span>Quên mật khẩu?</span>
                             </div>
 

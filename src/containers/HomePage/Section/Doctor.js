@@ -1,31 +1,39 @@
 import React, { Component } from 'react';
 import './Doctor.scss';
 import { FormattedMessage } from 'react-intl';
-
+import { connect } from 'react-redux';
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import osteoarthritisImg from "../../../assets/doctor/co-xuong-khop.jpg";
-import mentalityImg from "../../../assets/doctor/tam-ly.jpg";
-import dermatologyImg from "../../../assets/doctor/da-lieu.jpeg";
-import covidImg from "../../../assets/doctor/covid.jpg";
-import mentalImg from "../../../assets/doctor/suc-khoe-tam-than.jpg";
-import digestImg from "../../../assets/doctor/tieu-hoa.jpg";
-import medicalImg from "../../../assets/doctor/noi-khoa.jpg";
-import pediatricImg from "../../../assets/doctor/khoa-nhi.jpg";
-
-
-
-
-
+import { LANGUAGES } from "../../../utils";
+import * as actions from "../../../store/actions";
 
 class Doctor extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            arrDoctors: [],
+        }
+    }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
+            this.setState({
+                arrDoctors: this.props.topDoctorsRedux
+            })
+        }
+    }
+
+    componentDidMount() {
+        this.props.loadTopDoctors()
+    }
 
 
     render() {
+        console.log("data:", this.props.topDoctorsRedux)
+        let arrDoctors = this.state.arrDoctors;
+        let { language } = this.props
+        //arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors)
         let settings = {
             dots: false,
             infinite: false,
@@ -45,46 +53,41 @@ class Doctor extends Component {
                     </div>
                     <div className='doctor-body'></div>
                     <Slider {...settings}>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={osteoarthritisImg} alt='' />
-                            <div className='text-doctor'>Thạc sĩ, Bác sĩ <b>Mai Duy Linh</b><p>Cơ Xương Khớp</p></div>
-                        </div>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={mentalityImg} alt='' />
-                            <div className='text-doctor'>Bác sĩ Chuyên khoa II <b>Trần Minh Khuyên</b><p>Tư vấn, trị liệu tâm lý</p></div>
-                        </div>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={dermatologyImg} alt='' />
-                            <div className='text-doctor'>Thạc sĩ, Bác sĩ <b>Nguyễn Ngọc Trai</b><p>Da liễu</p></div>
-                        </div>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={covidImg} alt='' />
-                            <div className='text-doctor'>Bác sĩ Chuyên khoa I <b>Lâm Thùy Nga</b><p>Tư vấn F0 Covid-19, Nội tổng quát, Nội thần kinh</p></div>
-                        </div>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={mentalImg} />
-                            <div className='text-doctor'>Thạc sĩ, Bác sĩ <b>Lê Tấn Lợi</b><p>Sức khỏe tâm thần, Nội thần kinh</p></div>
-                        </div>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={digestImg} alt='' />
-                            <div className='text-doctor'>Tiến sĩ, Bác sĩ <b>Nguyễn Thị Út</b><p>Nội tiêu hóa</p></div>
-                        </div>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={medicalImg} alt='' />
-                            <div className='text-doctor'>Bác sĩ Chuyên khoa II <b>Phạm Thị Bích Loan</b><p>Nội khoa</p></div>
-                        </div>
-                        <div className='doctor-customize'>
-                            <img className='rounded-full m-auto' style={{height:"140px", width:"140px"}} src={pediatricImg} alt='' />
-                            <div className='text-doctor'>Bác sĩ Chuyên khoa II <b>Phạm Thị Minh Hà</b><p>Nhi Khoa</p></div>
-                        </div>
+                        {arrDoctors && arrDoctors.length > 0 && arrDoctors.map((item, index) => {
+                            let imageBase64 = '';
+                            if (item.image) {
+                                imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+                            }
+                            let nameVi = `${item.positionData.value_Vi}, ${item.lastName} ${item.firstName}`;
+                            let nameEn = `${item.positionData.value_En}, ${item.firstName} ${item.lastName}`;
+                            return (
+                                <div className='doctor-customize' key={index}>
+                                    <img className='rounded-full m-auto' style={{ height: "140px", width: "140px", backgroundImage: `url(${imageBase64})` }} alt='' />
+                                    <div className='text-doctor'>Thạc sĩ, Bác sĩ <b>{language === LANGUAGES.VI ? nameVi : nameEn}</b><p>Cơ Xương Khớp</p></div>
+                                </div>
+                            )
+                        })}
                     </Slider>
                 </div>
             </div>
-
-
         );
     }
-
 }
 
-export default Doctor;
+const mapStateToProps = state => {
+    return {
+        language: state.app.language,
+        isLoggedIn: state.user.isLoggedIn,
+        topDoctorsRedux: state.admin.topDoctors
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        loadTopDoctors: () => dispatch(actions.fetchTopDoctor()),
+        //getGenderStart: () => dispatch(actions.fetchGenderStart()),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Doctor);
+//export default Doctor;

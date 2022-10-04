@@ -19,6 +19,9 @@ import About from './Section/About';
 
 class HomePage extends Component {
 
+    // handleAfterChange = (event, slick, currentSlide) => {
+    // }
+
     render() {
         let settings = {
             dots: true,
@@ -26,6 +29,7 @@ class HomePage extends Component {
             autoplaySpeed: 5000,
             slidesToShow: 1,
             slidesToScroll: 1,
+            //afterChange: this.handleAfterChange
             // nextArrow: <SampleNextArrow />,
             // prevArrow: <SamplePrevArrow />
         };
@@ -45,8 +49,6 @@ class HomePage extends Component {
                     <Doctor />
                     <News />
                     <About />
-
-
                 </div>
 
 

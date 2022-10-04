@@ -16,8 +16,8 @@ class About extends Component {
                         <iframe className='' width="100%" height="400px"
                             src="https://www.youtube.com/embed/nAgCrYrmH3I"
                             title="The Future Of Hospitals - The Medical Futurist"
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
+                            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen>
                         </iframe>
                     </div>
                     <div className='content-about-right'>
