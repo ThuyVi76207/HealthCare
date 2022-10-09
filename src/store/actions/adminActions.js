@@ -1,5 +1,14 @@
 import actionTypes from './actionTypes';
-import { getSettingService, createNewUserService, getAllUsers, deleteUserService, editUserService, getTopDoctorHomeService } from '../../services/userService'
+import {
+    getSettingService,
+    createNewUserService,
+    getAllUsers,
+    deleteUserService,
+    editUserService,
+    getTopDoctorHomeService,
+    getAllDoctors,
+    saveDetailDoctorService,
+} from '../../services/userService'
 import { toast } from 'react-toastify';
 
 export const fetchGenderStart = () => {
@@ -205,6 +214,55 @@ export const fetchTopDoctor = () => {
             console.error(e)
             dispatch({
                 type: actionTypes.FETCH_TOP_DOCTORS_FAILURE
+            })
+        }
+    }
+}
+export const fetchAllDoctor = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getAllDoctors();
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
+                    dataDr: res.data
+                })
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_DOCTORS_FAILURE
+                })
+            }
+        } catch (e) {
+            console.error(e)
+            dispatch({
+                type: actionTypes.FETCH_ALL_DOCTORS_FAILURE
+            })
+        }
+    }
+} 
+
+export const saveDetailDoctor = (data) => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await saveDetailDoctorService(data);
+            if (res && res.errCode === 0) {
+
+                toast.success("Save Infor Detail Doctor successfully!!")
+
+                dispatch({
+                    type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
+                })
+            } else {
+                toast.error("Save Infor Detail Doctor error!!")
+                dispatch({
+                    type: actionTypes.SAVE_DETAIL_DOCTOR_FAILURE
+                })
+            }
+        } catch (e) {
+            toast.error("Save Infor Detail Doctor error!!")
+            console.error('SAVE_DETAIL_DOCTORS_FAILURE',e)
+            dispatch({
+                type: actionTypes.SAVE_DETAIL_DOCTOR_FAILURE
             })
         }
     }
