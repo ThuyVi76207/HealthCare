@@ -1,5 +1,5 @@
 import actionTypes from './actionTypes';
-import { getSettingService, createNewUserService, getAllUsers, deleteUserService, editUserService, getTopDoctorHomeService } from '../../services/userService'
+import { getSettingService, createNewUserService, getAllUsers, deleteUserService, editUserService, getTopDoctorHomeService, getAllDoctors } from '../../services/userService'
 import { toast } from 'react-toastify';
 
 export const fetchGenderStart = () => {
@@ -205,6 +205,52 @@ export const fetchTopDoctor = () => {
             console.error(e)
             dispatch({
                 type: actionTypes.FETCH_TOP_DOCTORS_FAILURE
+            })
+        }
+    }
+}
+
+export const fetchAllDoctors = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getAllDoctors();
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
+                    dataDr: res.data
+                })
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_DOCTORS_FAILURE
+                })
+            }
+        } catch (e) {
+            console.error(e)
+            dispatch({
+                type: actionTypes.FETCH_ALL_DOCTORS_FAILURE
+            })
+        }
+    }
+}
+
+export const fetchAllScheduleHours = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getSettingService("TIME");
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_SETTINGS_SCHEDULE_HOURS_SUCCESS,
+                    dataTime: res.data
+                })
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_SETTINGS_SCHEDULE_HOURS_FAILURE
+                })
+            }
+        } catch (e) {
+            console.error(e)
+            dispatch({
+                type: actionTypes.FETCH_SETTINGS_SCHEDULE_HOURS_FAILURE
             })
         }
     }

@@ -35,6 +35,9 @@
             "manage-specialty": "Specialties manager",
             "handbook": "Handbook",
             "manage-handbook": "Handbook manager"
+        },
+        "doctor": {
+            "manage-schedule": "Doctor's Manage Schedule"
         }
     },
     "manage-user": {
@@ -52,5 +55,19 @@
         "save": "Save user",
         "upload-image": "Upload Image ",
         "edit": "Save changes"
+    },
+    "manage-schedule": {
+        "title": "Manage medical examination plan",
+        "choose-doctor": "Choose doctor",
+        "choose-day": "Choose day",
+        "save": "Save information"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "Doctor is not active at this time! Please choose another time period!",
+            "choose": "Choose ",
+            "book-free": "and book (free)"
+        }
     }
 }
