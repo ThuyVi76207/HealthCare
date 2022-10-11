@@ -69,5 +69,29 @@
             "choose": "Choose ",
             "book-free": "and book (free)"
         }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create doctors information",
+            "select-doctor": "Select doctor",
+            "infor": "Introduction information",
+            "add": "Create information",
+            "save": "Save information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "nameClinic": "Clinic's name",
+            "addressClinic": "Clinic's address",
+            "note": "Note"
+        },
+        "clinic": {
+            "address": "Address Clinic",
+            "name": "HeathCare Polyclinic",
+            "detail-address": "891 Nguyen Kiem, Ward 3, Go Vap District, HCM City",
+            "price": "Price",
+            "detail-price": "Khám & Nội soi Tai Mũi họng 400.000đ",
+            "include": "Đã bao gồm nội soi Tai Mũi họng",
+            "payment-methods": "The hospital can pay by cash and swipe card"
+        }
     }
 }

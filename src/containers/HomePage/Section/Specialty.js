@@ -3,8 +3,6 @@ import './Specialty.scss';
 import { FormattedMessage } from 'react-intl';
 
 import Slider from "react-slick";
-
-
 import osteoarthritisImg from "../../../assets/specialty/co_xuong_khop.png";
 import mentalityImg from "../../../assets/specialty/tam-ly.jpg";
 import dermatologyImg from "../../../assets/specialty/da-lieu.jpg";
@@ -15,13 +13,7 @@ import medicalImg from "../../../assets/specialty/noi-khoa.jpg";
 import pediatricImg from "../../../assets/specialty/nhi-khoa.jpg";
 
 
-
-
-
-
 class Specialty extends Component {
-
-
 
     render() {
         let settings = {
@@ -83,7 +75,6 @@ class Specialty extends Component {
 
         );
     }
-
 }
 
 
