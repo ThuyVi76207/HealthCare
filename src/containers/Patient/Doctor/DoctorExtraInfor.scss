@@ -1,0 +1,43 @@
+.doctor-extra-infor-container {
+    padding-left: 15px;
+
+    .content-up {
+        margin-bottom: 10px;
+
+        .address-clinic {
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        .name-clinic {
+            padding: 5px 0;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .detail-clinic {
+            font-weight: 600;
+            color: #333;
+        }
+    }
+
+    .content-down {
+        .price {}
+
+        .detail-price {}
+
+        .include {}
+
+        .payment-methods {}
+    }
+
+    .content-extra {
+        .extra-price {}
+
+        .detail-extra-price {}
+
+        .value-extra-price {}
+
+        .extra-infor {}
+    }
+}

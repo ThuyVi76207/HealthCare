@@ -8,15 +8,19 @@ export const adminMenu = [
                 //     { name: 'menu.system.system-administrator.user-redux', link: '/system/user-redux' },
                 // ]
             },
-            {
-                name: 'menu.admin.manage-admin', link: '/system/user-admin'
-            },
+            // {
+            //     name: 'menu.admin.manage-admin', link: '/system/user-admin'
+            // },
             {
                 name: 'menu.admin.crud', link: '/system/user-manage'
             },
             {
                 name: 'menu.admin.crud-redux', link: '/system/user-redux'
             },
+            {
+                name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule'
+            },
+
         ]
     },
     { //quan ly phong kham
@@ -40,4 +44,15 @@ export const adminMenu = [
             }
         ]
     },
+];
+
+export const doctorMenu = [
+    {
+        name: 'menu.admin.manage-user',
+        menus: [
+            { //quan ly nguoi dung
+                name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule'
+            }
+        ]
+    }
 ];

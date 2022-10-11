@@ -8,6 +8,7 @@ import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
 import { handleLoginApi } from '../../services/userService';
+import e from 'cors';
 
 class Login extends Component {
     constructor(props) {
@@ -67,6 +68,11 @@ class Login extends Component {
         })
     }
 
+    handleKeyDown = (event) => {
+        if (event.key === 'Enter' || event.key === 13) {
+            this.handleLogin();
+        }
+    }
 
     render() {
         return (
@@ -89,7 +95,9 @@ class Login extends Component {
                                 <label className="form-label">Mật khẩu</label>
                                 <div className="input-password">
                                     <input id="password" name="password" autoComplete="on" type={this.state.isShowPassword ? 'text' : 'password'} placeholder="Nhập mật khẩu"
-                                        value={this.state.password} onChange={(e) => this.handleOnChangePassword(e)} className="form-control" />
+                                        value={this.state.password} onChange={(e) => this.handleOnChangePassword(e)} className="form-control"
+                                        onKeyDown={(event) => this.handleKeyDown(event)}
+                                    />
                                     <span onClick={() => { this.handleShowPassword() }}>
                                         <i className={this.state.isShowPassword ? "fas fa-eye" : "fas fa-eye-slash"}></i>
                                     </span>

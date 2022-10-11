@@ -5,13 +5,6 @@ import moment from 'moment';
 import { KeyCodeUtils } from "../../utils";
 import './DatePicker.scss';
 
-// const CustomInput = ({ value, defaultValue, inputRef, onInputChange, onInputBlur, ...props }) => {
-//     return <input {...props} className='custom-form-control custom-date-input' defaultValue={defaultValue} ref={inputRef}
-//         onChange={onInputChange}
-//         onBlur={onInputBlur}
-//     />;
-// };
-
 class DatePicker extends Component {
 
     flatpickrNode = null;
@@ -74,37 +67,10 @@ class DatePicker extends Component {
         return str;
     }
 
-    // autoFormatonBlur = (value) => {
-    //     var input = value;
-    //     var values = input.split('/').map(function (v, i) {
-    //         return v.replace(/\D/g, '')
-    //     });
-    //     var output = '';
-
-    //     if (values.length == 3) {
-    //         var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
-    //         var month = parseInt(values[0]) - 1;
-    //         var day = parseInt(values[1]);
-    //         var d = new Date(year, month, day);
-    //         if (!isNaN(d)) {
-    //             //document.getElementById('result').innerText = d.toString();
-    //             var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
-    //             output = dates.map(function (v) {
-    //                 v = v.toString();
-    //                 return v.length == 1 ? '0' + v : v;
-    //             }).join(' / ');
-    //         };
-    //     };
-    //     // this.value = output;
-    //     return output;
-    // }
-
     autoFormatOnChange = (value, seperator) => {
         var input = value;
 
         let regexForDeleting = new RegExp(`\\D\\${seperator}$`);
-
-        //if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3); // dat.nt: Xóa thêm 1 ký tự nếu xóa dấu cách sau / (VD: 12 / 12 /=> 12 / 1)
 
         if (regexForDeleting.test(input)) input = input.substr(0, input.length - 3);
 
@@ -130,11 +96,8 @@ class DatePicker extends Component {
     onInputBlur = (e) => {
     }
 
-    //dat.nt : Auto Fill cho dạng ngăn cách và format cụ thể (seperator có thể dc thay thế)
     SEPERATOR = "/";
-    DATE_FORMAT_AUTO_FILL = "d/m/Y"; // Format không thay đổi
-
-    // dat.nt : Format ngày hiển thị
+    DATE_FORMAT_AUTO_FILL = "d/m/Y";
     DISPLAY_FORMAT = "d/m/Y";
 
     render() {
@@ -155,11 +118,6 @@ class DatePicker extends Component {
                 value={value}
                 onChange={onChange}
                 options={options}
-                // render={
-                //     ({ defaultValue, value, ...props }, ref) => {
-                //         return <CustomInput defaultValue={defaultValue} inputRef={ref} onInputChange={this.onInputChange} onInputBlur={this.onInputBlur} />
-                //     }
-                // }
                 {...otherProps}
             />
         );

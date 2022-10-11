@@ -218,6 +218,10 @@ export const fetchTopDoctor = () => {
         }
     }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 export const fetchAllDoctor = () => {
     return async (dispatch, getState) => {
         try {
@@ -239,7 +243,69 @@ export const fetchAllDoctor = () => {
             })
         }
     }
+<<<<<<< HEAD
+}
+
+export const fetchAllScheduleHours = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getSettingService("TIME");
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_SETTINGS_SCHEDULE_HOURS_SUCCESS,
+                    dataTime: res.data
+                })
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_SETTINGS_SCHEDULE_HOURS_FAILURE
+                })
+            }
+        } catch (e) {
+            console.error(e)
+            dispatch({
+                type: actionTypes.FETCH_SETTINGS_SCHEDULE_HOURS_FAILURE
+            })
+        }
+    }
+}
+
+export const getRequiredDoctorInfor = () => {
+    return async (dispatch, getState) => {
+        try {
+            dispatch({ type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_START })
+            let resPrice = await getSettingService("PRICE");
+            let resPayment = await getSettingService("PAYMENT");
+            let resProvince = await getSettingService("PROVINCE");
+            if (resPrice && resPrice.errCode === 0
+                && resPayment && resPayment.errCode === 0
+                && resProvince && resProvince.errCode === 0) {
+                let data = {
+                    resPrice: resPrice.data,
+                    resPayment: resPayment.data,
+                    resProvince: resProvince.data
+                }
+                dispatch(fetchRequiredDoctorInforSuccess(data))
+            } else {
+                dispatch(fetchRequiredDoctorInforFailure());
+            }
+        } catch (e) {
+            dispatch(fetchRequiredDoctorInforFailure());
+            console.log(e);
+        }
+    }
+}
+
+export const fetchRequiredDoctorInforSuccess = (data) => ({
+    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
+    data: data
+})
+
+export const fetchRequiredDoctorInforFailure = () => ({
+    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILURE,
+})
+=======
 } 
+>>>>>>> master
 
 export const saveDetailDoctor = (data) => {
     return async (dispatch, getState) => {
@@ -261,10 +327,18 @@ export const saveDetailDoctor = (data) => {
             }
         } catch (e) {
             toast.error("Save Infor Detail Doctor error!!")
+<<<<<<< HEAD
+            console.error('SAVE_DETAIL_DOCTORS_FAILURE', e)
+=======
             console.error('SAVE_DETAIL_DOCTORS_FAILURE',e)
+>>>>>>> master
             dispatch({
                 type: actionTypes.SAVE_DETAIL_DOCTOR_FAILURE
             })
         }
     }
+<<<<<<< HEAD
+}
+=======
 } 
+>>>>>>> master

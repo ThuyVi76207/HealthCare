@@ -35,6 +35,9 @@
             "manage-specialty": "Specialties manager",
             "handbook": "Handbook",
             "manage-handbook": "Handbook manager"
+        },
+        "doctor": {
+            "manage-schedule": "Doctor's Manage Schedule"
         }
     },
     "manage-user": {
@@ -52,5 +55,43 @@
         "save": "Save user",
         "upload-image": "Upload Image ",
         "edit": "Save changes"
+    },
+    "manage-schedule": {
+        "title": "Manage medical examination plan",
+        "choose-doctor": "Choose doctor",
+        "choose-day": "Choose day",
+        "save": "Save information"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "Doctor is not active at this time! Please choose another time period!",
+            "choose": "Choose ",
+            "book-free": "and book (free)"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create doctors information",
+            "select-doctor": "Select doctor",
+            "infor": "Introduction information",
+            "add": "Create information",
+            "save": "Save information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "nameClinic": "Clinic's name",
+            "addressClinic": "Clinic's address",
+            "note": "Note"
+        },
+        "clinic": {
+            "address": "Address Clinic",
+            "name": "HeathCare Polyclinic",
+            "detail-address": "891 Nguyen Kiem, Ward 3, Go Vap District, HCM City",
+            "price": "Price",
+            "detail-price": "Khám & Nội soi Tai Mũi họng 400.000đ",
+            "include": "Đã bao gồm nội soi Tai Mũi họng",
+            "payment-methods": "The hospital can pay by cash and swipe card"
+        }
     }
 }
