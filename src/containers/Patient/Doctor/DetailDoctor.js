@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import MaiLayout from '../../../layouts/MaiLayout';
 import './DetailDoctor.scss';
 import { getDetailInforDoctor } from '../../../services/userService';
+import { LANGUAGES } from '../../../utils';
 
 class DetailDoctor extends Component {
 
@@ -22,7 +23,7 @@ class DetailDoctor extends Component {
                     detailDoctor: res.data
                 })
             }
-            console.log('Res:', res)
+
 
         }
     }
@@ -35,6 +36,13 @@ class DetailDoctor extends Component {
 
 
         let { detailDoctor } = this.state;
+        let { laguage } = this.props;
+        let nameVi = '', nameEn = '';
+        if (detailDoctor && detailDoctor.positionData) {
+            nameVi = `${detailDoctor.positionData.value_Vi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`;
+            nameEn = `${detailDoctor.positionData.value_En}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
+        }
+
         console.log('DetailDoctor:', detailDoctor)
         return (
             <>
@@ -43,16 +51,18 @@ class DetailDoctor extends Component {
                         <div className='intro-doctor'>
                             <div
                                 className='content-left'
-                                style={{ backgroundImage: `url(${detailDoctor.image})` }}>
+                                style={{ backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})` }}>
 
                             </div>
                             <div className='content-right'>
-                                <div className='up'>Phos giaso suw</div>
+                                <div className='up'>
+                                    {laguage === LANGUAGES.VI ? nameVi : nameEn}
+                                </div>
                                 <div className='down'>
-                                    {detailDoctor.MarkDown && detailDoctor.MarkDown.description
+                                    {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.description
                                         &&
                                         <span>
-                                            {detailDoctor.MarkDown.description}
+                                            {detailDoctor.Markdown.description}
                                         </span>}
                                 </div>
                             </div>
@@ -61,7 +71,10 @@ class DetailDoctor extends Component {
 
                         </div>
                         <div className='detail-infor-doctor'>
-
+                            {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
+                                &&
+                                <div dangerouslySetInnerHTML={{__html: detailDoctor.Markdown.contentHTML}}></div>
+                            }
                         </div>
                         <div className='comment-doctor'>
 
@@ -75,8 +88,7 @@ class DetailDoctor extends Component {
 
 const mapStateToProps = state => {
     return {
-        DetailDoctorMenuPath: state.app.DetailDoctorMenuPath,
-        isLoggedIn: state.user.isLoggedIn
+        laguage: state.app.laguage,
     };
 };
 
