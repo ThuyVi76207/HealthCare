@@ -218,7 +218,10 @@ export const fetchTopDoctor = () => {
         }
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 export const fetchAllDoctor = () => {
     return async (dispatch, getState) => {
         try {
@@ -240,6 +243,7 @@ export const fetchAllDoctor = () => {
             })
         }
     }
+<<<<<<< HEAD
 }
 
 export const fetchAllScheduleHours = () => {
@@ -299,6 +303,9 @@ export const fetchRequiredDoctorInforSuccess = (data) => ({
 export const fetchRequiredDoctorInforFailure = () => ({
     type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILURE,
 })
+=======
+} 
+>>>>>>> master
 
 export const saveDetailDoctor = (data) => {
     return async (dispatch, getState) => {
@@ -320,10 +327,18 @@ export const saveDetailDoctor = (data) => {
             }
         } catch (e) {
             toast.error("Save Infor Detail Doctor error!!")
+<<<<<<< HEAD
             console.error('SAVE_DETAIL_DOCTORS_FAILURE', e)
+=======
+            console.error('SAVE_DETAIL_DOCTORS_FAILURE',e)
+>>>>>>> master
             dispatch({
                 type: actionTypes.SAVE_DETAIL_DOCTOR_FAILURE
             })
         }
     }
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> master

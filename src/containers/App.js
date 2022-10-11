@@ -14,8 +14,6 @@ import Login from './Authenticate/Login';
 import Header from './Header/Header';
 import System from '../routes/System';
 
-import { CustomToastCloseButton } from '../components/CustomToast';
-import CustomScrollbars from "../components/CustomScrollbars";
 import DetailDoctor from './Patient/Doctor/DetailDoctor';
 
 class App extends Component {
