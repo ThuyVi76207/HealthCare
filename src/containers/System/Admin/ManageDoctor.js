@@ -28,7 +28,7 @@ class ManageDoctor extends Component {
 
 
     componentDidMount() {
-        this.props.fetchAllDoctor()
+        this.props.fetchAllDoctors()
     }
 
     buildDataInputSelect = (inputData) => {
@@ -169,7 +169,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchAllDoctor: () => dispatch(actions.fetchAllDoctor()),
+        fetchAllDoctors: () => dispatch(actions.fetchAllDoctors()),
         saveDetailDoctor: (data) => dispatch(actions.saveDetailDoctor(data))
     };
 };
