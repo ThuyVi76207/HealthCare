@@ -21,8 +21,8 @@ class About extends Component {
                         </iframe>
                     </div>
                     <div className='content-about-right'>
-                        <h2>HCARE</h2>
-                        <div>Cung cấp dịch vụ </div>
+
+                        <h2>HCARE</h2>Cung cấp phương pháp công nghệ hóa việc chăm sóc sức khỏe. Theo dõi sức khỏe cá nhân một cách thường xuyên. Cầu nối giúp rút ngắn khoảng cách giữa bác sĩ và bệnh nhân.
                     </div>
                 </div>
 

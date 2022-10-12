@@ -22,30 +22,19 @@ const Footer = () => {
 
             </div>
             <div className="footer-down">
-                <div className="footer-policy">
-                    <h3 className="text-[20px]">CHÍNH SÁCH VÀ ĐIỀU KHOẢN</h3>
-                    <ul>
-                        <li><a href="/">Chính sách bảo mật</a></li>
-                        <li><a href="/"> Chính sách thanh toán</a></li>
-                        <li><a href="/">Điều khoản sử dụng</a></li>
-                    </ul>
-                    
-                    
-                    
-                </div>
                 <div className="footer-suport">
                     <a href="tel:0123456894" className="flex items-center">
                         <i className="mr-2.5">
                             <ion-icon name="call-outline"></ion-icon>
                         </i>
-                        
+
                         <h5>0123456894</h5>
                     </a>
                     <div className="flex items-center">
                         <i className="mr-2.5">
                             <ion-icon name="mail-outline"></ion-icon>
                         </i>
-                        
+
                         <h5>healthcare@gmail.com</h5>
                     </div>
                 </div>
