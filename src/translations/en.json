@@ -67,12 +67,33 @@
             "schedule": "Schedule",
             "no-schedule": "Doctor is not active at this time! Please choose another time period!",
             "choose": "Choose ",
-            "book-free": "and book (free)"
+            "book-free": " and book (free)"
+        },
+        "extra-infor": {
+            "text-address": "Clinic Address",
+            "price": "Price: ",
+            "payment": "Patient can payment with: ",
+            "more": "See more",
+            "hide": "Hide it"
+        },
+        "booking": {
+            "title": "Information to book an appointment",
+            "fullName": "Full Name",
+            "phoneNumber": "Phone Number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason",
+            "birthday": "Birthday",
+            "gender": "Gender",
+            "btn-Submit": "Submit",
+            "btn-Cancel": "Cancel",
+            "free-booking": "Free Booking",
+            "price-booking": "Price: "
         }
     },
     "admin": {
         "manage-doctor": {
-            "title": "Create doctors information",
+            "title": "CREATE DOCTOR INFORMATION",
             "select-doctor": "Select doctor",
             "infor": "Introduction information",
             "add": "Create information",
@@ -82,16 +103,11 @@
             "province": "Province",
             "nameClinic": "Clinic's name",
             "addressClinic": "Clinic's address",
-            "note": "Note"
-        },
-        "clinic": {
-            "address": "Address Clinic",
-            "name": "HeathCare Polyclinic",
-            "detail-address": "891 Nguyen Kiem, Ward 3, Go Vap District, HCM City",
-            "price": "Price",
-            "detail-price": "Khám & Nội soi Tai Mũi họng 400.000đ",
-            "include": "Đã bao gồm nội soi Tai Mũi họng",
-            "payment-methods": "The hospital can pay by cash and swipe card"
+            "note": "Note",
+            "value-doctor": "Choose doctor",
+            "select-price": "Select Price",
+            "select-payment": "Select Payment",
+            "select-provice": "Select Provider"
         }
     }
 }

@@ -67,13 +67,34 @@
             "schedule": "Lịch khám",
             "no-schedule": "Bác sĩ không hoạt động vào khoản thời gian này! Vui lòng chọn khoản thời gian khác!",
             "choose": "Chọn ",
-            "book-free": "và đặt (miễn phí)"
+            "book-free": " và đặt (miễn phí)"
+        },
+        "extra-infor": {
+            "text-address": "Địa chỉ khám",
+            "price": "GIÁ KHÁM: ",
+            "payment": "Người bệnh có thể thanh toán bằng: ",
+            "more": "Xem thêm",
+            "hide": "Thu gọn"
+        },
+        "booking": {
+            "title": "Thông tin đặt lịch khám",
+            "fullName": "Họ tên",
+            "phoneNumber": "Số điện thoại",
+            "email": "Email",
+            "address": "Địa chỉ liên lạc",
+            "reason": "Lý do khám",
+            "birthday": "Ngày sinh",
+            "gender": "Giới tính",
+            "btn-Submit": "Đặt lịch",
+            "btn-Cancel": "Thoát",
+            "free-booking": "Miễn phí đặt lịch",
+            "price-booking": "Giá khám: "
         }
     },
     "admin": {
         "manage-doctor": {
-            "title": "Tạo thêm thông tin doctors",
-            "select-doctor": "Chọn bác sĩ",
+            "title": "TẠO THÔNG TIN CHO BÁC SĨ",
+            "select-doctor": "Danh sách bác sĩ",
             "infor": "Thông tin giới thiệu",
             "add": "Tạo thông tin",
             "save": "Lưu thông tin",
@@ -82,16 +103,11 @@
             "province": "Tỉnh thành",
             "nameClinic": "Tên phòng khám",
             "addressClinic": "Địa chỉ phòng khám",
-            "note": "Ghi chú"
-        },
-        "clinic": {
-            "address": "Địa chỉ khám",
-            "name": "Phòng khám đa khoa HeathCare",
-            "detail-address": "891 Nguyễn Kiệm, phường 3, Gò Vấp, TP.HCM",
-            "price": "Giá khám: ",
-            "detail-price": "Khám & Nội soi Tai Mũi họng 400.000đ",
-            "include": "Đã bao gồm nội soi Tai Mũi họng",
-            "payment-methods": "Bệnh viện có thanh toán bằng hình thức tiền mặt và quẹt thẻ"
+            "note": "Ghi chú",
+            "value-doctor": "Chọn bác sĩ",
+            "select-price": "Chọn giá",
+            "select-payment": "Chọn phương thức thanh toán",
+            "select-provice": "Chọn tỉnh thành"
         }
     }
 }
