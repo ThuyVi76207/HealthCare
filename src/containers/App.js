@@ -13,7 +13,7 @@ import Home from '../routes/Home';
 import Login from './Authenticate/Login';
 import Header from './Header/Header';
 import System from '../routes/System';
-
+import VerifyEmail from './Patient/VerifyEmail';
 import DetailDoctor from './Patient/Doctor/DetailDoctor';
 
 class App extends Component {
@@ -54,6 +54,8 @@ class App extends Component {
                                 <Route path={'/doctor/'} component={userIsAuthenticated(Doctor)} />
                                 <Route path={path.HOMEPAGE} component={HomePage} />
                                 <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
+                                <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
+
                             </Switch>
                             {/* </CustomScrollbars> */}
                         </div>
