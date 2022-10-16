@@ -29,13 +29,18 @@
             height: 295px;
             border: 1px solid #d5d9d7;
             padding: 20px 0;
+
             .text-doctor {
                 text-align: center;
                 margin: 10px 0;
             }
-        }
 
-        .doctor-body {}
+            .doctor-image {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
     }
 
     .img-customize {

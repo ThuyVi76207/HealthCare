@@ -98,10 +98,6 @@ class ManageSchedule extends Component {
             return;
         }
 
-        //let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-
-        //let formatedDate = moment(currentDate).unix();
-
         let formatedDate = new Date(currentDate).getTime();
 
         if (rangeTime && rangeTime.length > 0) {
@@ -159,7 +155,6 @@ class ManageSchedule extends Component {
                                 className="form-control"
                                 value={this.state.currentDate[0]}
                                 minDate={yesterday}
-                            //value={this.state.currentDate}
                             />
                         </div>
                         <div className="col-12 pick-hour-container mt-2">

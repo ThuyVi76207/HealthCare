@@ -59,6 +59,22 @@ const getAllSpecialty = () => {
     return axios.get(`/api/get-specialty`)
 }
 
+const getExtraDoctorInforById = (doctorId) => {
+    return axios.get(`/api/get-extra-infor-doctor-by-id?doctorId=${doctorId}`)
+}
+
+const getProfileDoctorById = (doctorId) => {
+    return axios.get(`/api/get-profile-doctor-by-id?doctorId=${doctorId}`)
+}
+
+const postPatientBooking = (data) => {
+    return axios.post('/api/patient-booking-appointment', data)
+}
+
+const postVerifyBooking = (data) => {
+    return axios.post('/api/verify-booking-appointment', data)
+}
+
 export {
     handleLoginApi,
     getAllUsers,
@@ -73,5 +89,9 @@ export {
     saveDetailDoctorService,
     getDetailInforDoctor,
     createNewSpecialty,
-    getAllSpecialty
+    getAllSpecialty,
+    getExtraDoctorInforById,
+    getProfileDoctorById,
+    postPatientBooking,
+    postVerifyBooking
 }

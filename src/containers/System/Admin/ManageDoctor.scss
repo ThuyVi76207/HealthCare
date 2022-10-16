@@ -1,7 +1,15 @@
-.rdw-editor-main {
-    height: 420px !important;
-    margin-left: 10px !important;
+.more-infor-extra {
+    width        : 97%;
+    margin       : 0 auto;
+    margin-bottom: 20px;
 }
-.rdw-editor-toolbar {
-    padding: 20px 5px 0 !important;
+
+.btn-save-infor {
+    background-color: #333;
+    color           : #fff;
+    border-radius   : 5px;
+
+    &:hover {
+        background-color: rgb(249, 116, 22);
+    }
 }
