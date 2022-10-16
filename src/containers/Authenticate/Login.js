@@ -81,8 +81,7 @@ class Login extends Component {
                     <div className="login-content">
                         <div className="form-login">
                             <h3 className="heading"><b>Đăng nhập</b></h3>
-                            <p className="desc">Hế lô mí cưng ❤️</p>
-
+                            {/* <p className="desc">Đăng nhập để sử dụng dịch vụ</p> */}
                             <div className="spacer"></div>
                             <div className="form-group">
                                 <label htmlFor="email" className="form-label">Email</label>

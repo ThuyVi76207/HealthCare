@@ -4,6 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { postVerifyBooking } from "../../services/userService";
 import Navbar from "../Navbar/Navbar";
 import './VerifyEmail.scss';
+import ThankImg from '../../assets/Thank.jpg';
 
 class VerifyEmail extends Component {
     constructor(props) {
@@ -60,9 +61,17 @@ class VerifyEmail extends Component {
                                 <>
                                     <div className="info-booking">Xác nhận lịch hẹn thành công</div>
                                     <div className="info-booking">Cảm ơn bạn vì đã sử dụng dịch vụ của chúng tôi!!</div>
+                                    <div className="image-thank">
+                                        <img className="thank-you" src={ThankImg} alt="" />
+                                    </div>
                                 </>
                                 :
-                                <div className="info-booking">Lịch hẹn không tồn tại hoặc đã được xác nhận</div>
+                                <>
+                                    <div className="info-booking">Lịch hẹn không tồn tại hoặc đã được xác nhận</div>
+                                    <div className="image-thank">
+                                        <img className="thank-you" src={ThankImg} alt="" />
+                                    </div>
+                                </>
                             }
                         </div>
                     }

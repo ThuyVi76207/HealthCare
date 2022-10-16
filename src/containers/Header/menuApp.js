@@ -11,9 +11,9 @@ export const adminMenu = [
             // {
             //     name: 'menu.admin.manage-admin', link: '/system/user-admin'
             // },
-            {
-                name: 'menu.admin.crud', link: '/system/user-manage'
-            },
+            // {
+            //     name: 'menu.admin.crud', link: '/system/user-manage'
+            // },
             {
                 name: 'menu.admin.crud-redux', link: '/system/user-redux'
             },
@@ -50,8 +50,11 @@ export const doctorMenu = [
     {
         name: 'menu.admin.manage-user',
         menus: [
-            { //quan ly nguoi dung
+            { //quan ly ke hoach 
                 name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule'
+            },
+            { //quan ly nguoi benh
+                name: 'menu.doctor.manage-patient', link: '/doctor/manage-patient'
             }
         ]
     }

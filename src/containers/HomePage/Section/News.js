@@ -18,9 +18,6 @@ import pediatricImg from "../../../assets/specialty/nhi-khoa.jpg";
 import NewsBlock from './News/NewsBlock';
 
 
-
-
-
 class News extends Component {
 
 
@@ -40,14 +37,14 @@ class News extends Component {
             <div className='section-news'>
                 <div className='news-container'>
                     <div className='news-header mt-5 mb-6'>
-                        <h2 className='text-7xl text-center'>NEWS</h2>
+                        <h2 className='text-7xl text-center'><FormattedMessage id="homeheader.news" /></h2>
                     </div>
                     <div className='news-body'></div>
                     <Slider {...settings}>
-                        <NewsBlock image={osteoarthritisImg} text={"Tin tuc suc khoerhbshbs sbshbc sbchjsbch shbchsbh bchsbhcbdh hachjbahjbhja"}/>
-                        <NewsBlock image={osteoarthritisImg} text={"Tin tuc suc khoerhbshbs sbshbc sbchjsbch shbchsbh bchsbhcbdh hachjbahjbhja"}/>
-                        <NewsBlock image={osteoarthritisImg} text={"Tin tuc suc khoerhbshbs sbshbc sbchjsbch shbchsbh bchsbhcbdh hachjbahjbhja"}/>
-                        <NewsBlock image={osteoarthritisImg} text={"Tin tuc suc khoerhbshbs sbshbc sbchjsbch shbchsbh bchsbhcbdh hachjbahjbhja"}/>
+                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
+                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
+                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
+                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
                     </Slider>
                 </div>
             </div>

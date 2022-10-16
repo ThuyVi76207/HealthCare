@@ -65,13 +65,13 @@ const Navbar = ({ onchangeLanguage, language }) => {
                             <Link to={"/home"}><b><FormattedMessage id="homeheader.homepage" /></b></Link>
                         </div>
                         <div className='child-content'>
-                            <Link to="/"><b><FormattedMessage id="homeheader.onlinemedica" /></b></Link>
+                            <Link to="#"><b><FormattedMessage id="homeheader.onlinemedica" /></b></Link>
                         </div>
                         <div className='child-content'>
-                            <Link to="/"><b><FormattedMessage id="homeheader.forum" /></b></Link>
+                            <Link to="#"><b><FormattedMessage id="homeheader.forum" /></b></Link>
                         </div>
                         <div className='child-content'>
-                            <Link to="/"><b><FormattedMessage id="homeheader.healthnews" /></b></Link>
+                            <Link to="#"><b><FormattedMessage id="homeheader.healthnews" /></b></Link>
                         </div>
                         <div className='child-content'>
                             <Link to={"/contact"}><b><FormattedMessage id="homeheader.contact" /></b></Link>

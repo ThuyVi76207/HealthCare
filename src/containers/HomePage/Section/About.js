@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './About.scss';
-
+import { FormattedMessage } from 'react-intl';
 
 class About extends Component {
 
@@ -21,15 +21,10 @@ class About extends Component {
                         </iframe>
                     </div>
                     <div className='content-about-right'>
-
-                        <h2>HCARE</h2>Cung cấp phương pháp công nghệ hóa việc chăm sóc sức khỏe. Theo dõi sức khỏe cá nhân một cách thường xuyên. Cầu nối giúp rút ngắn khoảng cách giữa bác sĩ và bệnh nhân.
+                        <h2>HCARE</h2><FormattedMessage id="homeheader.Health-Care" />
                     </div>
                 </div>
-
-
             </div>
-
-
         );
     }
 

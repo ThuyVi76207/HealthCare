@@ -20,7 +20,9 @@
         "digest": "Tiêu hóa",
         "medical": "Nội khoa",
         "pediatric": "Nhi khoa",
-        "doctors": "Các bác sĩ nổi bật"
+        "doctors": "Các bác sĩ nổi bật",
+        "news": "Cẩm nang",
+        "Health-Care": "Cung cấp phương pháp công nghệ hóa việc chăm sóc sức khỏe. Theo dõi sức khỏe cá nhân một cách thường xuyên. Cầu nối giúp rút ngắn khoảng cách giữa bác sĩ và bệnh nhân."
     },
     "menu": {
         "admin": {
@@ -28,7 +30,7 @@
             "manage-doctor": "Quản lý bác sĩ",
             "manage-admin": "Quản lý admin",
             "crud": "CRUD user",
-            "crud-redux": "CRUD redux",
+            "crud-redux": "Quản lý người dùng",
             "clinic": "Phòng khám",
             "manage-clinic": "Quản lý phòng khám",
             "specialty": "Chuyên khoa",
@@ -37,7 +39,8 @@
             "manage-handbook": "Quản lý bài đăng"
         },
         "doctor": {
-            "manage-schedule": "Quản lý kế hoạch khám bệnh"
+            "manage-schedule": "Quản lý kế hoạch khám bệnh",
+            "manage-patient": "Quản lý bệnh nhân"
         }
     },
     "manage-user": {

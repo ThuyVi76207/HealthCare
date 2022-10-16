@@ -20,7 +20,9 @@
         "digest": "Digest",
         "medical": "Medical",
         "pediatric": "Pediatrics",
-        "doctors": "Outstanding Doctors"
+        "doctors": "Outstanding Doctors",
+        "news": "News",
+        "Health-Care": "Provide a method to technologyize operational work. Monitor personal health on a regular basis. Bridges help shorten the distance between doctors and patients."
     },
     "menu": {
         "admin": {
@@ -28,7 +30,7 @@
             "manage-doctor": "Doctor manager",
             "manage-admin": "Admin manager",
             "crud": "CRUD user",
-            "crud-redux": "CRUD redux",
+            "crud-redux": "User manager",
             "clinic": "Clinics",
             "manage-clinic": "Clinics manager",
             "specialty": "Specialties",
@@ -37,7 +39,8 @@
             "manage-handbook": "Handbook manager"
         },
         "doctor": {
-            "manage-schedule": "Doctor's Manage Schedule"
+            "manage-schedule": "Doctor's Manage Schedule",
+            "manage-patient": "Patient Management"
         }
     },
     "manage-user": {

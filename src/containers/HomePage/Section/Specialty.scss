@@ -25,10 +25,12 @@
 
         .specialty-customize {
             cursor: pointer;
+
             .text-specialty {
                 text-align: center;
                 margin: 10px 0;
             }
+
             &:hover {
                 color: rgb(48, 142, 201);
             }
@@ -68,6 +70,7 @@
             background: rgb(183, 180, 180) !important;
         }
     }
+
     .slick-disabled {
         display: none !important;
     }
@@ -93,6 +96,8 @@
         .img-sp {
             display: block;
             height: 224px !important;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
