@@ -24,9 +24,13 @@
         }
 
         .specialty-customize {
+            cursor: pointer;
             .text-specialty {
                 text-align: center;
                 margin: 10px 0;
+            }
+            &:hover {
+                color: rgb(48, 142, 201);
             }
         }
 

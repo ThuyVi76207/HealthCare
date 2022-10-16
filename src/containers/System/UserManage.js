@@ -127,10 +127,10 @@ class UserManage extends Component {
                         editUser={this.modalEditUser}
                     />
                 }
-                <div className="title text-center">Manage users</div>
+                <div className="title text-center">QUẢN LÝ NGƯỜI DÙNG</div>
                 <div className="mx-3">
                     <button className="btn btn-primary px-3" onClick={() => this.handleAddUser()}>
-                        <i className="fas fa-plus"></i> Add New User
+                        <i className="fas fa-plus"></i> TẠO MỚI
                     </button>
                 </div>
 

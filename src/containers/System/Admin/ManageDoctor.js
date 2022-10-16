@@ -10,9 +10,11 @@ import 'react-markdown-editor-lite/lib/index.css';
 import Select from 'react-select';
 import { CRUD_ACTIONS, LANGUAGES } from '../../../utils';
 import { getDetailInforDoctor } from "../../../services/userService";
-
+// import { Editor } from "react-draft-wysiwyg";
+// import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+// import { EditorState } from 'draft-js';
+// import './ManageDoctor.scss';
 const mdParser = new MarkdownIt(/* Markdown-it options */);
-
 class ManageDoctor extends Component {
 
     constructor(props) {
@@ -20,6 +22,7 @@ class ManageDoctor extends Component {
         this.state = {
             contentMarkdown: '',
             contentHTML: '',
+            // contentMarkdown: EditorState.createEmpty(),
             selectedDoctor: '',
             description: '',
             listDortors: [],
@@ -127,7 +130,7 @@ class ManageDoctor extends Component {
     }
 
     handleSaveContentMaskdown = () => {
-        let { hasOldData } = this.state;
+        let hasOldData = this.state;
         this.props.saveDetailDoctor({
             contentHTML: this.state.contentHTML,
             contentMarkdown: this.state.contentMarkdown,
@@ -191,6 +194,10 @@ class ManageDoctor extends Component {
                 selectedPrice: selectedPrice,
                 selectedProvince: selectedProvince
             })
+            console.log('Check:', res.data)
+            console.log('Check html', res.data.Markdown.contentHTML)
+            console.log('Check Mark', res.data.Markdown.contentMarkdown)
+            console.log('Check des', res.data.Markdown.description)
 
         } else {
             this.setState({
@@ -222,6 +229,12 @@ class ManageDoctor extends Component {
             ...stateCopy
         })
     }
+    // onEditorStateChange = ({ text }) => {
+    //     this.setState({
+    //         contentMarkdown: text,
+    //     });
+    // };
+
 
     render() {
         let { hasOldData } = this.state;
@@ -249,6 +262,18 @@ class ManageDoctor extends Component {
                         </textarea>
                     </div>
                 </div>
+                {/* <div className='h-[500px] w-[95%] m-auto border border-gray-400'>
+                    <Editor
+
+                        contentMarkdown={this.state.contentMarkdown}
+                        toolbarClassName="toolbarClassName"
+                        wrapperClassName="wrapperClassName"
+                        editorClassName="editorClassName"
+                        onEditorStateChange={this.state.onEditorStateChange}
+
+                    />
+                </div> */}
+
                 <div className="more-infor-extra row">
                     <div className="col-4 form-group">
                         <label><FormattedMessage id="admin.manage-doctor.price" /></label>
@@ -312,11 +337,11 @@ class ManageDoctor extends Component {
                     onChange={this.handleEditorChange}
                     value={this.state.contentMarkdown}
                 />
-                <div className='m-3'>
+                <div className='mt-[25px] ml-[34px]'>
                     <button onClick={() => this.handleSaveContentMaskdown()}
-                        className={`p-1 ${hasOldData ? 'bg-orange-500' : 'border hover:bg-slate-400'} btn-save-infor`}>
+                        className={`p-1 ${hasOldData === true ? 'bg-orange-500' : 'border hover:bg-slate-400'}`}>
                         {
-                            hasOldData ? <span><FormattedMessage id="admin.manage-doctor.save" /></span> : <span><FormattedMessage id="admin.manage-doctor.add" /></span>
+                            hasOldData === true ? <span>Lưu thông tin</span> : <span>Tạo thông tin</span>
                         }
                     </button>
                 </div>
