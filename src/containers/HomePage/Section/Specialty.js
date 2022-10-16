@@ -3,6 +3,8 @@ import './Specialty.scss';
 import { FormattedMessage } from 'react-intl';
 
 import Slider from "react-slick";
+import { getAllSpecialty } from '../../../services/userService';
+
 import osteoarthritisImg from "../../../assets/specialty/co_xuong_khop.png";
 import mentalityImg from "../../../assets/specialty/tam-ly.jpg";
 import dermatologyImg from "../../../assets/specialty/da-lieu.jpg";
@@ -14,6 +16,21 @@ import pediatricImg from "../../../assets/specialty/nhi-khoa.jpg";
 
 
 class Specialty extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataSpecialty: []
+        }
+    }
+    async componentDidMount() {
+        let res = await getAllSpecialty();
+        console.log("Check Specialty", res);
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataSpecialty: res.data ? res.data : []
+            })
+        }
+    }
 
     render() {
         let settings = {
@@ -26,6 +43,8 @@ class Specialty extends Component {
             // prevArrow: <SamplePrevArrow />
         };
 
+        let { dataSpecialty } = this.state;
+
 
         return (
             <div className='section-specialty'>
@@ -36,11 +55,22 @@ class Specialty extends Component {
                     </div>
                     <div className='specialty-body'></div>
                     <Slider {...settings}>
-                        <div className='specialty-customize'>
-                            <img className='img-sp' src={osteoarthritisImg} alt='' />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.musculoskeletal" /></div>
-                        </div>
-                        <div className='specialty-customize'>
+                        {
+                            dataSpecialty && dataSpecialty.length > 0 &&
+                            dataSpecialty.map((item, index) => {
+                                return (
+                                    <div className='specialty-customize' key={index}>
+                                        <img className='img-sp' src={item.image} alt='' />
+                                        <div className='text-specialty'>
+                                            {/* <FormattedMessage id="homeheader.musculoskeletal" /> */}
+                                            {item.name}
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+
+                        {/* <div className='specialty-customize'>
                             <img className='img-sp' src={mentalityImg} alt='' />
                             <div className='text-specialty'><FormattedMessage id="homeheader.mentality" /></div>
                         </div>
@@ -67,7 +97,7 @@ class Specialty extends Component {
                         <div className='specialty-customize'>
                             <img className='img-sp' src={pediatricImg} alt='' />
                             <div className='text-specialty'><FormattedMessage id="homeheader.pediatric" /></div>
-                        </div>
+                        </div> */}
                     </Slider>
                 </div>
             </div>

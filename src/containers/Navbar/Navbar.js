@@ -25,10 +25,10 @@ const Navbar = ({ onchangeLanguage, language }) => {
                 setStart(false);
             }
         };
-    
+
         // Attach the callback after the component mounts
         window.addEventListener("scroll", callback);
-    
+
         // Detach the callback before the component unmounts
         return () => window.removeEventListener("scroll", callback);
     }, []);
@@ -39,10 +39,10 @@ const Navbar = ({ onchangeLanguage, language }) => {
             <div className='navbar-up'>
                 <div className='header-up'>
                     <img className='h-[3.125rem]' src={LogoImg} />
-                    <div className='content-item'>
+                    <a href="mailto:healthcare@gmail.com" className='content-item'>
                         <i className='fa fa-envelope'></i>
-                        <div className='text-item'>healthcare@gmail.com</div>
-                    </div>
+                        <div className='text-item'>healthcare@gmail.com<h3></h3></div>
+                    </a>
 
                     <a href="tel:0123456894" className='content-item'>
                         <i className='fa fa-phone'></i>
@@ -58,11 +58,11 @@ const Navbar = ({ onchangeLanguage, language }) => {
                     </div>
                 </div>
             </div>
-            <div className={start?'navbar-down sticky':'navbar-down'} id='menuHeader'>
+            <div className={start ? 'navbar-down sticky' : 'navbar-down'} id='menuHeader'>
                 <div className='header-down'>
                     <div className='left-content'>
                         <div className='child-content'>
-                            <Link to="/"><b><FormattedMessage id="homeheader.homepage" /></b></Link>
+                            <Link to={"/home"}><b><FormattedMessage id="homeheader.homepage" /></b></Link>
                         </div>
                         <div className='child-content'>
                             <Link to="/"><b><FormattedMessage id="homeheader.onlinemedica" /></b></Link>
@@ -72,6 +72,9 @@ const Navbar = ({ onchangeLanguage, language }) => {
                         </div>
                         <div className='child-content'>
                             <Link to="/"><b><FormattedMessage id="homeheader.healthnews" /></b></Link>
+                        </div>
+                        <div className='child-content'>
+                            <Link to={"/contact"}><b><FormattedMessage id="homeheader.contact" /></b></Link>
                         </div>
 
                     </div>

@@ -4,7 +4,6 @@
     top: 260px;
 
     .title1 {
-
         text-align: center;
         font-size: 30px;
         text-shadow: 1px 1px 1px #333;
@@ -26,10 +25,10 @@
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        padding: 10px;
         width: 400px;
         border-radius: 25px;
         background: #eefff5;
+        padding: 10px;
 
         i {
             margin: 0 5px;
@@ -41,6 +40,7 @@
             background: transparent;
             border: none;
             outline: none;
+            color: #333;
         }
     }
 }

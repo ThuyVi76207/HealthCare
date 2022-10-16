@@ -135,8 +135,8 @@ class ModelUser extends Component {
 
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" className="px-3" onClick={() => { this.handleAddNewUser() }}>Save</Button>{' '}
-                    <Button color="secondary" className="px-3" onClick={() => { this.toggle() }}>Close</Button>
+                    <Button className="px-3 bg-orange-500 border-none hover:bg-orange-600" onClick={() => { this.handleAddNewUser() }}>Save</Button>{' '}
+                    <Button className="px-3 bg-gray-400 border-none hover:bg-gray-600" onClick={() => { this.toggle() }}>Close</Button>
                 </ModalFooter>
             </Modal>
         )
