@@ -3,7 +3,6 @@ import './News.scss';
 import { FormattedMessage } from 'react-intl';
 
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -32,7 +31,6 @@ class News extends Component {
             // nextArrow: <SampleNextArrow />,
             // prevArrow: <SamplePrevArrow />
         };
-
         return (
             <div className='section-news'>
                 <div className='news-container'>
@@ -48,11 +46,8 @@ class News extends Component {
                     </Slider>
                 </div>
             </div>
-
-
         );
     }
-
 }
 
 export default News;
