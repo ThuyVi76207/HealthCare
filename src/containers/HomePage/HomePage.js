@@ -4,8 +4,6 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
 import MaiLayout from '../../layouts/MaiLayout';
 import BannerImg1 from '../../assets/Banner/Banner1.jpg';
 import BannerImg2 from '../../assets/Banner/Banner2.png';
