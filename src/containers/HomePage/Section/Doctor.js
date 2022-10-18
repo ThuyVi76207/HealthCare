@@ -70,7 +70,7 @@ class Doctor extends Component {
                             return (
                                 <div className='doctor-customize' key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                                     <img className='doctor-image rounded-full m-auto' style={{ height: "140px", width: "140px", backgroundImage: `url(${imageBase64})` }} alt='' />
-                                    <div className='text-doctor'><b>{language === LANGUAGES.VI ? nameVi : nameEn}</b><p>Cơ Xương Khớp</p></div>
+                                    <div className='text-doctor'><b>{language === LANGUAGES.VI ? nameVi : nameEn}</b></div>
                                 </div>
                             )
                         })}
