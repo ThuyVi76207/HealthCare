@@ -4,6 +4,8 @@ import { FormattedMessage } from 'react-intl';
 
 import Slider from "react-slick";
 import { getAllSpecialty } from '../../../services/userService';
+import { withRouter } from "react-router";
+import { connect } from 'react-redux';
 
 import osteoarthritisImg from "../../../assets/specialty/co_xuong_khop.png";
 import mentalityImg from "../../../assets/specialty/tam-ly.jpg";
@@ -30,6 +32,13 @@ class Specialty extends Component {
                 dataSpecialty: res.data ? res.data : []
             })
         }
+    }
+    handleViewDeatailSpecialty = (item) => {
+        console.log('View infor:', item)
+        if (this.props.history) {
+            this.props.history.push(`/detail-speacilty/${item.id}`);
+        }
+
     }
 
     render() {
@@ -59,7 +68,10 @@ class Specialty extends Component {
                             dataSpecialty && dataSpecialty.length > 0 &&
                             dataSpecialty.map((item, index) => {
                                 return (
-                                    <div className='specialty-customize' key={index}>
+                                    <div className='specialty-customize'
+                                        key={index}
+                                        onClick={() => { this.handleViewDeatailSpecialty(item) }}
+                                    >
                                         <img className='img-sp' src={item.image} alt='' />
                                         <div className='text-specialty'>
                                             {/* <FormattedMessage id="homeheader.musculoskeletal" /> */}
@@ -106,6 +118,19 @@ class Specialty extends Component {
         );
     }
 }
+const mapStateToProps = state => {
+    return {
+        language: state.app.language,
+        isLoggedIn: state.user.isLoggedIn,
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+
+        //getGenderStart: () => dispatch(actions.fetchGenderStart()),
+    };
+};
 
 
-export default Specialty;
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Specialty));

@@ -1,22 +1,21 @@
 .bg-footer {
     background: #1C7371;
-    margin-top: 70px;
 
     .footer-up {
-        display: flex;
+        display        : flex;
         justify-content: space-evenly;
-        margin: auto;
-        width: 80%;
-        padding-top: 22px;
+        margin         : auto;
+        width          : 80%;
+        padding-top    : 22px;
 
         .footer-conten {
-            margin: auto;
-            color: #fff;
+            margin   : auto;
+            color    : #fff;
             font-size: 1.2rem;
 
             .footer-share {
-                display: flex;
-                gap: 20px;
+                display    : flex;
+                gap        : 20px;
                 align-items: center;
             }
         }
@@ -24,14 +23,14 @@
     }
 
     .footer-down {
-        padding-top: 30px;
-        display: flex;
+        padding-top    : 30px;
+        display        : flex;
         justify-content: space-around;
-        color: #fff;
-        padding-bottom: 40px;
-        width: 85%;
-        margin: auto;
-        align-items: center;
+        color          : #fff;
+        padding-bottom : 40px;
+        width          : 85%;
+        margin         : auto;
+        align-items    : center;
 
         .footer-suport {
             width: 40%;
