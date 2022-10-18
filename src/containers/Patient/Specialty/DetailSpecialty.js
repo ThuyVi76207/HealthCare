@@ -3,13 +3,15 @@ import { connect } from "react-redux";
 import { FormattedMessage } from 'react-intl';
 import './DetailSpecialty.scss';
 import MaiLayout from '../../../layouts/MaiLayout';
-import DoctorSchedule from '../Doctor/DoctorSchedule'
+import DoctorSchedule from '../Doctor/DoctorSchedule';
+import DoctorExtraInfor from '../Doctor/DoctorExtraInfor';
+import ProfileDoctor from '../Doctor/ProfileDoctor';
 
 class DetailSpecialty extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrDoctorId: [22, 23, 24, 25, 26, 27, 28]
+            arrDoctorId: [22]
         }
     }
 
@@ -27,18 +29,47 @@ class DetailSpecialty extends Component {
         let { arrDoctorId } = this.state;
         return (
             <MaiLayout>
-                <div></div>
-                {
-                    arrDoctorId && arrDoctorId.length > 0 &&
-                    arrDoctorId.map((item, index) => {
-                        return (
-                            <DoctorSchedule
-                                doctorIdFromParent={item}
-                                key={index}
-                            />
-                        )
-                    })
-                }
+                <div className='detail-specialty-container'>
+                    <div className='detail-specialty'>
+
+                    </div>
+                    <div className='description-specialty'>
+
+                    </div>
+
+                    {
+                        arrDoctorId && arrDoctorId.length > 0 &&
+                        arrDoctorId.map((item, index) => {
+                            return (
+                                <div className='each-doctor' key={index}>
+                                    <div className='pt-content-left'>
+                                        <div className='profile-doctor'>
+                                            <ProfileDoctor
+                                                doctorId={item}
+                                                isShowDescriptionDoctor={true}
+                                            // dataTime={dataTime}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className='pt-content-right'>
+                                        <div className='doctor-schdule'>
+                                            <DoctorSchedule
+                                                doctorIdFromParent={item}
+                                            />
+                                        </div>
+                                        <div className='doctor-extra-infor'>
+                                            <DoctorExtraInfor
+                                                doctorIdFromParent={item}
+                                            />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            )
+                        })
+                    }
+                </div>
 
             </MaiLayout>
 
