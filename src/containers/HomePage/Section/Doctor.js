@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { LANGUAGES } from "../../../utils";
 import * as actions from "../../../store/actions";
-import { withRouter } from "react-router"
+import { withRouter } from "react-router";
 
 class Doctor extends Component {
 
@@ -27,8 +27,10 @@ class Doctor extends Component {
     }
 
     componentDidMount() {
-        this.props.loadTopDoctors()
+        this.props.loadTopDoctors();
+
     }
+
 
     handleViewDetailDoctor = (doctor) => {
         console.log('View infor:', doctor)
@@ -93,6 +95,7 @@ const mapDispatchToProps = dispatch => {
     return {
         loadTopDoctors: () => dispatch(actions.fetchTopDoctor()),
         //getGenderStart: () => dispatch(actions.fetchGenderStart()),
+
     };
 };
 
