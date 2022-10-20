@@ -8,7 +8,7 @@ let socket = socketIO("ws://localhost:7777", { transports: ["websocket"] });
 const ChatMessager = () => {
     const [statusConnect, setStatusConnect] = useState(false);
     // const [valChat, setValChat] = useState([]);
-    const [textReceived, setTextReceived] = useState("");
+    const [textReceived, setTextReceived] = useState("Chào bạn, bạn cần hỗ trợ gì?");
 
 
 
@@ -37,11 +37,20 @@ const ChatMessager = () => {
         }
     }, [statusConnect])
 
-    // const [valueChat, setValueChat] = useState("");
+    const [showChat, setShowChat] = useState(false);
 
+    useEffect(() => {
+        window.onscroll = function () {
+            console.info(document.documentElement.scrollTop);
+            var livechat = document.getElementById("livechat");
+            if (document.documentElement.scrollTop > 400 || document.body.scrollTop > 400) {
+                livechat.style.display = "block"
+            } else {
+                livechat.style.display = "none"
+            }
 
-
-
+        }
+    }, [])
 
 
     return (
@@ -68,21 +77,13 @@ const ChatMessager = () => {
             // }}
 
             >
-                <div className="ctrlq fb-button">
+                <div id="livechat" onClick={() => { setShowChat(!showChat) }} className="ctrlq fb-button">
                     <div class="bubble">1</div>
                     <div class="bubble-msg">Bạn cần hỗ trợ?</div>
                 </div>
                 <div className="form-chat-container">
                     <div></div>
-                    <FormChat
-                        // onChange={(val) => {
-                        //     // console.log("val", val)
-                        //     setValueChat(val)
-                        // }}
-                        // onChange={(e) => setValChat(e.target.value)}
-                        dataMessage={textReceived}
-
-                    />
+                    {showChat ? <FormChat dataMessage={textReceived} /> : null}
                 </div>
 
             </div>

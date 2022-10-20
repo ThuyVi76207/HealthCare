@@ -7,7 +7,6 @@ import { isNull } from "lodash";
 
 let socket = socketIO("ws://localhost:7777", { transports: ["websocket"] });
 
-let count = 0;
 const FormChat = ({ dataMessage }) => {
 
 
@@ -20,10 +19,6 @@ const FormChat = ({ dataMessage }) => {
     const handleChat = () => {
 
         socket.emit('on-chat', { message: val })
-        count++;
-
-
-
         // socket.on('user-chat', (message) => {
 
         //     setValChat(message.message)
@@ -43,43 +38,30 @@ const FormChat = ({ dataMessage }) => {
         }
     }, [dataMessage])
 
-    // console.log("Check valMes", valMes)
-    // console.log('Check count', count)
-    // if (dataMessage) {
-    //     const ChatMessager = (dataMessage) => {
-    //         const messages = document.querySelector('#messages');
-    //         const chatItem = document.createElement('li');
-    //         chatItem.textContent = dataMessage;
-    //         messages.appendChild(chatItem);
+    useEffect(() => {
+        window.onscroll = function () {
+            console.info(document.documentElement.scrollTop);
+            var mesageChat = document.getElementById("mesageChat");
+            if (document.documentElement.scrollTop > 400 || document.body.scrollTop > 400) {
+                mesageChat.style.display = "block"
+            } else {
+                mesageChat.style.display = "none"
+            }
 
-    //     }
-    //     ChatMessager(dataMessage);
-    // }
+        }
+    }, [])
 
 
-    //  ? ChatMessager(dataMessage) : 'không có tin nhan'valChat.forEach(element => {
-    //                 <li>{element}</li>
-    //             })
+
 
     return (
-        <div className="form-chat">
-            <div className="text-center py-[5px]">Chat Box</div>
+        <div className="form-chat" id="mesageChat">
+            <div className="text-center py-[5px] title-chat">Chat Box</div>
             <div className="form-chat-up">
-                <ul id="messages">{
-                    valMes && valMes.length > 0 && valMes.map((value, idx) => <li key={idx}>{value}</li>)
-                    // dataMessage.map(() => <li>{dataMessage}</li>)
+                <ul className="messages">{
+                    valMes && valMes.length > 0 && valMes.map((value, idx) => <li className="item-chat" key={idx}>{value}</li>)
                 }</ul>
             </div>
-
-            {/* <div className="form-chat-down">
-                <input id="chat-mes" className="input-chat" placeholder="Type something"
-                    value={val}
-                    onChange={(e) => {
-                        setVal(e.target.value)
-                    }}
-                ></input>
-                <button onClick={() => { handleChat && handleChat(val); ChatMessager(valChat) }} type="button">Gửi</button>
-            </div> */}
             <div className="form-chat-down">
                 <input id="chat-mes" className="input-chat" placeholder="Type something"
                     value={val}
