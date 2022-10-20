@@ -110,7 +110,8 @@
             "value-doctor": "Chọn bác sĩ",
             "select-price": "Chọn giá",
             "select-payment": "Chọn phương thức thanh toán",
-            "select-provice": "Chọn tỉnh thành"
+            "select-provice": "Chọn tỉnh thành",
+            "specialty": "Chọn chuyên khoa"
         }
     }
 }

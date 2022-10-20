@@ -4,7 +4,7 @@
 }
 
 .fb-widget {
-    display: none;
+    display: block;
 }
 
 .ctrlq.fb-button,
@@ -129,4 +129,12 @@
     border-radius: 8px;
     text-align   : center;
     font-size    : 13px;
+}
+
+.form-chat-container {
+    display              : grid;
+    grid-template-columns: auto auto;
+    justify-content      : end;
+    width                : 95%;
+    margin               : auto;
 }

@@ -544,6 +544,12 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mb-\[15px\] {
+  margin-bottom: 15px;
+}
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
 .mt-\[25px\] {
   margin-top: 25px;
 }
@@ -631,6 +637,10 @@ video {
 }
 .p-1 {
   padding: 0.25rem;
+}
+.py-\[5px\] {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .px-3 {
   padding-left: 0.75rem;

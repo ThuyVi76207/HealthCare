@@ -16,7 +16,11 @@ import System from '../routes/System';
 import VerifyEmail from './Patient/VerifyEmail';
 import DetailDoctor from './Patient/Doctor/DetailDoctor';
 import ContactContent from './Navbar/ContactContent';
+<<<<<<< HEAD
 import RoomContent from './VideoCall/RoomContent';
+=======
+import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
+>>>>>>> master
 
 class App extends Component {
 
@@ -58,7 +62,12 @@ class App extends Component {
                                 <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                 <Route path='/contact' component={ContactContent}></Route>
                                 <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
+<<<<<<< HEAD
                                 <Route path='/room' component={RoomContent}></Route>
+=======
+                                <Route path={path.DETAIL_SPECIALTY} component={DetailSpecialty} />
+
+>>>>>>> master
                             </Switch>
                             {/* </CustomScrollbars> */}
                         </div>

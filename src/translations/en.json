@@ -110,7 +110,8 @@
             "value-doctor": "Choose doctor",
             "select-price": "Select Price",
             "select-payment": "Select Payment",
-            "select-provice": "Select Provider"
+            "select-provice": "Select Provider",
+            "specialty": "Specialty"
         }
     }
 }
