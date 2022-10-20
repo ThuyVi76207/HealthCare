@@ -83,6 +83,18 @@ const postSendPrescription = (data) => {
     return axios.post(`/api/send-prescription`, data)
 }
 
+const postSendSMS = (data) => {
+    return axios.post(`/api/sendSMS`, data)
+}
+
+const getRoomVideo = () => {
+    return axios.get(`/api/`)
+}
+
+const getCallVideo = () => {
+    return axios.get(`/api/:room`)
+}
+
 export {
     handleLoginApi,
     getAllUsers,
@@ -103,5 +115,8 @@ export {
     postPatientBooking,
     postVerifyBooking,
     getAllPatientDoctor,
-    postSendPrescription
+    postSendPrescription,
+    postSendSMS,
+    getRoomVideo,
+    getCallVideo
 }

@@ -16,6 +16,7 @@ import System from '../routes/System';
 import VerifyEmail from './Patient/VerifyEmail';
 import DetailDoctor from './Patient/Doctor/DetailDoctor';
 import ContactContent from './Navbar/ContactContent';
+import RoomContent from './VideoCall/RoomContent';
 
 class App extends Component {
 
@@ -57,7 +58,7 @@ class App extends Component {
                                 <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                 <Route path='/contact' component={ContactContent}></Route>
                                 <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
-
+                                <Route path='/room' component={RoomContent}></Route>
                             </Switch>
                             {/* </CustomScrollbars> */}
                         </div>

@@ -32,7 +32,6 @@
             "crud": "CRUD user",
             "crud-redux": "User manager",
             "clinic": "Clinics",
-            "manage-clinic": "Clinics manager",
             "specialty": "Specialties",
             "manage-specialty": "Specialties manager",
             "handbook": "Handbook",
@@ -40,7 +39,8 @@
         },
         "doctor": {
             "manage-schedule": "Doctor's Manage Schedule",
-            "manage-patient": "Patient Management"
+            "manage-patient": "Patient Management",
+            "manage-clinic": "Clinics manager"
         }
     },
     "manage-user": {

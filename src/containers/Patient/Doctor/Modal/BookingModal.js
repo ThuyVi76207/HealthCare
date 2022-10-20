@@ -10,7 +10,7 @@ import DatePicker from '../../../../components/Input/DatePicker';
 import * as actions from '../../../../store/actions';
 import { LANGUAGES } from "../../../../utils";
 import Select from 'react-select';
-import { postPatientBooking } from '../../../../services/userService';
+import { postPatientBooking, postSendSMS } from '../../../../services/userService';
 import { toast } from 'react-toastify';
 import moment from 'moment';
 import LoadingOverlay from 'react-loading-overlay';
@@ -147,6 +147,10 @@ class BookingModal extends Component {
             doctorName: doctorName
         })
 
+        await postSendSMS({
+            phoneNumber: this.state.phoneNumber,
+        })
+
         if (res && res.errCode === 0) {
             toast.success('Booking a appointment success!!')
             this.props.closeBookingModal()
@@ -203,7 +207,7 @@ class BookingModal extends Component {
                                     </div>
                                     <div className="col-6 form-group">
                                         <label><FormattedMessage id="patient.booking.phoneNumber" /></label>
-                                        <input className="form-control"
+                                        <input className="form-control" placeholder="+84..."
                                             value={this.state.phoneNumber}
                                             onChange={(event) => this.handleOnChangeInput(event, 'phoneNumber')}
                                         />
