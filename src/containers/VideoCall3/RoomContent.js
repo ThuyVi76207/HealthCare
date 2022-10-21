@@ -10,7 +10,7 @@ import io from "socket.io-client"
 import "./RoomContent.scss"
 
 
-let socket = io("http://localhost:8080");
+let socket = io("http://localhost:7777");
 
 function RoomContent() {
     const [me, setMe] = useState("")
