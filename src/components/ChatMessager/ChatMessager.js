@@ -38,19 +38,39 @@ const ChatMessager = () => {
     }, [statusConnect])
 
     const [showChat, setShowChat] = useState(false);
+    const [showIconChat, setShowIconChat] = useState(false);
 
+    // useEffect(() => {
+    //     window.onscroll = function () {
+    //         console.info(document.documentElement.scrollTop);
+    //         var livechat = document.getElementById("livechat");
+    //         if (document.documentElement.scrollTop > 400 || document.body.scrollTop > 400) {
+    //             livechat.style.display = "block"
+    //         } else {
+    //             livechat.style.display = "none"
+    //         }
+
+    //     }
+    // }, [])
     useEffect(() => {
-        window.onscroll = function () {
-            console.info(document.documentElement.scrollTop);
-            var livechat = document.getElementById("livechat");
-            if (document.documentElement.scrollTop > 400 || document.body.scrollTop > 400) {
-                livechat.style.display = "block"
-            } else {
-                livechat.style.display = "none"
+        // Define the on-scroll callback
+        const callbackChat = function () {
+            // const secTop = secRef.current.offsetTop;
+            if (window.scrollY >= 400) {
+                setShowIconChat(true);
             }
+            else {
+                setShowIconChat(false);
+                setShowChat(false);
+            }
+        };
 
-        }
-    }, [])
+        // Attach the callback after the component mounts
+        window.addEventListener("scroll", callbackChat);
+
+        // Detach the callback before the component unmounts
+        return () => window.removeEventListener("scroll", callbackChat);
+    }, []);
 
 
     return (
@@ -76,17 +96,23 @@ const ChatMessager = () => {
             //     socket.emit("joinRoom", { idRoom: 123 })
             // }}
 
-            >
+            > {showIconChat ?
                 <div id="livechat" onClick={() => { setShowChat(!showChat) }} className="ctrlq fb-button">
                     <div class="bubble">1</div>
                     <div class="bubble-msg">Bạn cần hỗ trợ?</div>
                 </div>
+                : null
+                }
                 <div className="form-chat-container">
                     <div></div>
                     {showChat ? <FormChat dataMessage={textReceived} /> : null}
                 </div>
 
+
+
+
             </div>
+
         </>
 
     )

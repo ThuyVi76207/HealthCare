@@ -38,18 +38,6 @@ const FormChat = ({ dataMessage }) => {
         }
     }, [dataMessage])
 
-    useEffect(() => {
-        window.onscroll = function () {
-            console.info(document.documentElement.scrollTop);
-            var mesageChat = document.getElementById("mesageChat");
-            if (document.documentElement.scrollTop > 400 || document.body.scrollTop > 400) {
-                mesageChat.style.display = "block"
-            } else {
-                mesageChat.style.display = "none"
-            }
-
-        }
-    }, [])
 
 
 
