@@ -118,7 +118,7 @@ class DoctorExtraInfor extends Component {
                                     />
                                 }
                             </div>
-                            <div className="detail-price">Khám & Nội soi Tai Mũi họng 400.000đ</div>
+                            {/* <div className="detail-price">Khám & Nội soi Tai Mũi họng 400.000đ</div> */}
                             <div className="note">
                                 {extraInfor && extraInfor.note ? extraInfor.note : ''}
                             </div>

@@ -14,7 +14,6 @@ import Doctor from './Section/Doctor';
 import Specialty from './Section/Specialty';
 import News from './Section/News';
 import About from './Section/About';
-import ChatMessager from '../../components/ChatMessager/ChatMessager';
 
 class HomePage extends Component {
 
@@ -48,7 +47,6 @@ class HomePage extends Component {
                     <Doctor />
                     <News />
                     <About />
-                    <ChatMessager />
                 </div>
 
 

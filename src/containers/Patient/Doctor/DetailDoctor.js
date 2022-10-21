@@ -7,6 +7,7 @@ import { getDetailInforDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
+import ChatMessager from '../../../components/ChatMessager/ChatMessager';
 
 class DetailDoctor extends Component {
 
@@ -90,6 +91,7 @@ class DetailDoctor extends Component {
 
                         </div>
                     </div>
+                    <ChatMessager />
                 </MaiLayout>
             </>
         );

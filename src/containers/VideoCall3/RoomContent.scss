@@ -1,0 +1,55 @@
+.video-container {
+    background: #000;
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        color: #fff;
+        padding-top: 30px;
+    }
+
+    .container-call-video {
+        display: grid;
+        grid-template-columns: 7fr 3fr;
+        height: 700px;
+
+        .video-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-content: center;
+            margin-top: 10rem;
+            margin-left: 5rem;
+        }
+
+        .myId {
+            margin-right: 5rem;
+            border-radius: 5px;
+            background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+            background: linear-gradient(to right,
+                    #e2e2e2,
+                    #c9d6ff);
+            margin-top: 7rem;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+
+            .call-button {
+                text-align: center;
+                margin-top: 2rem;
+            }
+        }
+
+        .user-caller {
+            .caller {
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+
+    .btn-home {
+        margin-left: 82px;
+        margin-bottom: 50px;
+    }
+}
