@@ -14,6 +14,9 @@ import { postPatientBooking, postSendSMS } from '../../../../services/userServic
 import { toast } from 'react-toastify';
 import moment from 'moment';
 import LoadingOverlay from 'react-loading-overlay';
+import { useState } from 'react';
+import { Link } from "react-router-dom";
+import Paypal from '../../../../components/Paypal/Paypal';
 
 class BookingModal extends Component {
     constructor(props) {
@@ -29,7 +32,8 @@ class BookingModal extends Component {
             genders: '',
             doctorId: '',
             timeType: '',
-            isShowLoading: false
+            isShowLoading: false,
+            isShowPaypal: false,
         }
     }
 
@@ -127,8 +131,10 @@ class BookingModal extends Component {
         let timeString = this.buildTimeBooking(this.props.dataTime)
         let doctorName = this.buidDoctorName(this.props.dataTime)
 
+
         this.setState({
-            isShowLoading: true
+            isShowLoading: true,
+            isShowPaypal: true,
         })
 
         let res = await postPatientBooking({
@@ -173,6 +179,9 @@ class BookingModal extends Component {
         }
 
         console.log('dataTime', dataTime)
+
+
+
         return (
             <>
                 <LoadingOverlay
@@ -252,15 +261,20 @@ class BookingModal extends Component {
                                 </div>
                             </div>
                             <div className="booking-modal-footer">
+
                                 <button className="btn-booking-confirm"
                                     onClick={() => this.handleConfirmBooking()}
                                 ><FormattedMessage id="patient.booking.btn-Submit" /></button>
+
+
                                 <button className="btn-booking-cancel"
                                     onClick={closeBookingModal}><FormattedMessage id="patient.booking.btn-Cancel" />
                                 </button>
+
                             </div>
                         </div>
                     </Modal>
+
                 </LoadingOverlay>
             </>
         );
