@@ -9,6 +9,7 @@ import { LANGUAGES } from "../../../utils";
 import PrescriptionModal from './PrescriptionModal';
 import { toast } from 'react-toastify';
 import LoadingOverlay from 'react-loading-overlay';
+import ChatMessager from '../../../components/ChatMessager/ChatMessager';
 
 class ManagePatient extends Component {
     constructor(props) {
@@ -187,6 +188,7 @@ class ManagePatient extends Component {
                     />
 
                 </LoadingOverlay>
+                <ChatMessager />
             </>
         );
     }
