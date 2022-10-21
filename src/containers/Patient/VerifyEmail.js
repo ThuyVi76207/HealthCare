@@ -5,6 +5,7 @@ import { postVerifyBooking } from "../../services/userService";
 import Navbar from "../Navbar/Navbar";
 import './VerifyEmail.scss';
 import ThankImg from '../../assets/Thank.jpg';
+import Paypal from '../../components/Paypal/Paypal';
 
 class VerifyEmail extends Component {
     constructor(props) {
@@ -49,7 +50,7 @@ class VerifyEmail extends Component {
         let { statusVerify, errCode } = this.state;
         return (
             <>
-                <Navbar />
+                {/* <Navbar />
                 <div className="verify-email-container">
                     {statusVerify === false ?
                         <div>
@@ -75,7 +76,8 @@ class VerifyEmail extends Component {
                             }
                         </div>
                     }
-                </div>
+                </div> */}
+                <Paypal />
             </>
         );
     }
