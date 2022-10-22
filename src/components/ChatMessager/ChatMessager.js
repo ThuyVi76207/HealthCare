@@ -4,7 +4,7 @@ import socketIO, * as io from 'socket.io-client';
 import FormChat from "./FormChat";
 import ChatBox from "./ChatBox";
 
-let socket = socketIO("ws://localhost:7777", { transports: ["websocket"] });
+let socket = socketIO("ws://localhost:8080", { transports: ["websocket"] });
 
 const ChatMessager = () => {
     const [statusConnect, setStatusConnect] = useState(false);
@@ -57,7 +57,7 @@ const ChatMessager = () => {
         // Define the on-scroll callback
         const callbackChat = function () {
             // const secTop = secRef.current.offsetTop;
-            if (window.scrollY >= 400) {
+            if (window.scrollY >= 0) {
                 setShowIconChat(true);
             }
             else {

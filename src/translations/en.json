@@ -40,7 +40,7 @@
         "doctor": {
             "manage-schedule": "Doctor's Manage Schedule",
             "manage-patient": "Patient Management",
-            "manage-clinic": "Clinics manager"
+            "manage-clinic": "Online Clinic"
         }
     },
     "manage-user": {
@@ -91,7 +91,8 @@
             "btn-Submit": "Submit",
             "btn-Cancel": "Cancel",
             "free-booking": "Free Booking",
-            "price-booking": "Price: "
+            "price-booking": "Price: ",
+            "more": "More..."
         }
     },
     "admin": {

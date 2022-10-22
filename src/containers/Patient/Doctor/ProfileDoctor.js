@@ -7,6 +7,7 @@ import { LANGUAGES } from '../../../utils';
 import NumericFormat from 'react-number-format';
 import _ from 'lodash';
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 class ProfileDoctor extends Component {
     constructor(props) {
@@ -65,13 +66,12 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state;
-        let { language, isShowDescriptionDoctor, dataTime } = this.props;
+        let { language, isShowDescriptionDoctor, dataTime, isShowDetailInfor, doctorId } = this.props;
         let nameVi = '', nameEn = '';
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.value_Vi}, ${dataProfile.lastName} ${dataProfile.firstName}`;
             nameEn = `${dataProfile.positionData.value_En}, ${dataProfile.firstName} ${dataProfile.lastName}`;
         }
-        console.log('profile', this.state)
         return (
             <div className="profile-doctor-container">
                 <div className='intro-doctor'>
@@ -102,6 +102,10 @@ class ProfileDoctor extends Component {
                         </div>
                     </div>
                 </div>
+                {isShowDetailInfor === true &&
+                    <div className="link-detail-doctor" style={{ color: "blue" }}>
+                        <Link to={`/detail-doctor/${doctorId}`}><FormattedMessage id={"patient.booking.more"} /></Link>
+                    </div>}
                 <div className="price">
                     <FormattedMessage id="patient.booking.price-booking" />
                     {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI &&

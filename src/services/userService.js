@@ -87,12 +87,8 @@ const postSendSMS = (data) => {
     return axios.post(`/api/sendSMS`, data)
 }
 
-const getRoomVideo = () => {
-    return axios.get(`/api/`)
-}
-
-const getCallVideo = () => {
-    return axios.get(`/api/:room`)
+const getAllSpecialtyById = (data) => {
+    return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
 }
 
 export {
@@ -117,6 +113,5 @@ export {
     getAllPatientDoctor,
     postSendPrescription,
     postSendSMS,
-    getRoomVideo,
-    getCallVideo
+    getAllSpecialtyById
 }

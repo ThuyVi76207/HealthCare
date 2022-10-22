@@ -4,13 +4,13 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background   : #d9d9d9;
+    background: #d9d9d9;
     border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background   : #1a9a87;
+    background: #1a9a87;
     border-radius: 10px;
 }
 
@@ -20,21 +20,22 @@
 }
 
 .form-chat {
-    box-shadow   : 1px 2px 5px grey;
+    box-shadow: 1px 2px 5px grey;
     border-radius: 7px;
-    position     : fixed;
-    bottom       : 120px;
-    right        : 5px;
-    z-index      : 999;
+    position: fixed;
+    bottom: 120px;
+    right: 5px;
+    z-index: 999;
 
     .title-chat {
-        z-index      : 999;
+        z-index: 999;
         border-radius: 7px 7px 0 0;
-        background   : #fff;
+        background: rgb(110, 164, 235);
+        border-bottom: 1px solid;
     }
 
     .form-chat-up {
-        height    : 250px;
+        height: 250px;
         background: #fafafa;
         overflow-y: scroll;
 
@@ -42,23 +43,23 @@
             padding-top: 10px;
 
             .item-chat {
-                background   : #ffdbe7;
-                margin       : 0 20px 10px;
-                padding      : 5px 15px;
+                background: #ffdbe7;
+                margin: 0 20px 10px;
+                padding: 5px 15px;
                 border-radius: 20px;
-                width        : auto;
+                width: auto;
             }
         }
     }
 
     .form-chat-down {
-        padding        : 10px 30px;
-        box-shadow     : 0px 0px 1px grey;
-        border-radius  : 0px 0px 7px 7px;
-        display        : flex;
+        padding: 10px 30px;
+        box-shadow: 0px 0px 1px grey;
+        border-radius: 0px 0px 7px 7px;
+        display: flex;
         justify-content: space-between;
-        gap            : 15px;
-        background     : #fff;
+        gap: 15px;
+        background: #fff;
 
         .input-chat {
             padding: 5px;
