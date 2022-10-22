@@ -35,7 +35,7 @@ class ManageDoctor extends Component {
             selectedPrice: '',
             selectedPayment: '',
             selectedProvince: '',
-            selectSpecialty: '',
+            selectedSpecialty: '',
             nameClinic: '',
             addressClinic: '',
             note: '',
@@ -155,11 +155,11 @@ class ManageDoctor extends Component {
             selectedPayment: this.state.selectedPayment.value,
             selectedPrice: this.state.selectedPrice.value,
             selectedProvince: this.state.selectedProvince.value,
-            selectSpecialty: this.state.selectSpecialty,
+            selectedSpecialty: this.state.selectedSpecialty,
             nameClinic: this.state.nameClinic,
             addressClinic: this.state.addressClinic,
             note: this.state.note,
-            specialtyId: this.state.selectSpecialty.value
+            specialtyId: this.state.selectedSpecialty.value
         })
         console.log('Save handle', hasOldData)
 
@@ -175,7 +175,8 @@ class ManageDoctor extends Component {
 
             let addressClinic = '', nameClinic = '', note = '', paymentId = '',
                 priceId = '', provinceId = '', selectedPrice = '',
-                selectedPayment = '', selectedProvince = '', specialtyId = '', selectSpecialty = ''
+                selectedPayment = '', selectedProvince = '', specialtyId = '',
+                selectedSpecialty = ''
 
             if (res.data.Doctor_Infor) {
                 addressClinic = res.data.Doctor_Infor.addressClinic;
@@ -186,9 +187,6 @@ class ManageDoctor extends Component {
                 provinceId = res.data.Doctor_Infor.provinceId;
                 specialtyId = res.data.Doctor_Infor.specialtyId;
 
-
-
-
                 selectedPayment = listPayment.find(item => {
                     return item && item.value === paymentId
                 });
@@ -198,11 +196,10 @@ class ManageDoctor extends Component {
                 selectedProvince = listProvince.find(item => {
                     return item && item.value === provinceId
                 });
-                selectSpecialty = listSpecialty.find(item => {
+                selectedSpecialty = listSpecialty.find(item => {
                     return item && item.value === specialtyId
                 });
 
-                console.log('check selected', selectedProvince, selectedPayment, selectedPrice, selectSpecialty)
             }
 
             this.setState({
@@ -216,12 +213,8 @@ class ManageDoctor extends Component {
                 selectedPayment: selectedPayment,
                 selectedPrice: selectedPrice,
                 selectedProvince: selectedProvince,
-                selectSpecialty: selectSpecialty,
+                selectedSpecialty: selectedSpecialty,
             })
-            console.log('Check:', res.data)
-            console.log('Check html', res.data.Markdown.contentHTML)
-            console.log('Check Mark', res.data.Markdown.contentMarkdown)
-            console.log('Check des', res.data.Markdown.description)
 
         } else {
             this.setState({
@@ -231,7 +224,11 @@ class ManageDoctor extends Component {
                 hasOldData: false,
                 addressClinic: '',
                 nameClinic: '',
-                note: ''
+                note: '',
+                selectedPayment: '',
+                selectedPrice: '',
+                selectedProvince: '',
+                selectedSpecialty: '',
             })
         }
         console.log('Check: ', res.data.Doctor_Infor);
@@ -357,11 +354,11 @@ class ManageDoctor extends Component {
                     <div className="col-4 form-group mb-[15px]">
                         <label className='mb-2'><FormattedMessage id="admin.manage-doctor.specialty" /></label>
                         <Select
-                            value={this.state.selectSpecialty}
+                            value={this.state.selectedSpecialty}
                             onChange={this.handleChangeSelectDoctorInfor}
                             options={this.state.listSpecialty}
                             placeholder={<FormattedMessage id="admin.manage-doctor.specialty" />}
-                            name="selectSpecialty"
+                            name="selectedSpecialty"
                         />
 
                     </div>

@@ -40,7 +40,7 @@
         "doctor": {
             "manage-schedule": "Quản lý kế hoạch khám bệnh",
             "manage-patient": "Quản lý bệnh nhân",
-            "manage-clinic": "Quản lý phòng khám"
+            "manage-clinic": "Phòng khám Online"
         }
     },
     "manage-user": {
@@ -91,7 +91,8 @@
             "btn-Submit": "Đặt lịch",
             "btn-Cancel": "Thoát",
             "free-booking": "Miễn phí đặt lịch",
-            "price-booking": "Giá khám: "
+            "price-booking": "Giá khám: ",
+            "more": "Xem thêm..."
         }
     },
     "admin": {
