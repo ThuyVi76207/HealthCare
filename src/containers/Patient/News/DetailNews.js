@@ -100,8 +100,8 @@ class DetailNews extends Component {
         console.log('detailNews', this.state)
         return (
             <MaiLayout>
-                <div className='detail-specialty-container'>
-                    <div className='detail-specialty-body'>
+                <div className='detail-news-container'>
+                    <div className='detail-news-body'>
                         {dataDetailNews && !_.isEmpty(dataDetailNews)
                             &&
                             <div dangerouslySetInnerHTML={{ __html: dataDetailNews.descriptionHTML }}></div>
