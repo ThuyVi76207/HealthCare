@@ -9,7 +9,7 @@ import {
     getAllDoctors,
     saveDetailDoctorService,
     getAllSpecialty,
-    getAllNews,
+
 } from '../../services/userService'
 import { toast } from 'react-toastify';
 

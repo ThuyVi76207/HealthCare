@@ -96,6 +96,9 @@ const createNews = (data) => {
 const getAllNews = () => {
     return axios.get(`/api/get-news`)
 }
+const getAllNewsById = (data) => {
+    return axios.get(`/api/get-detail-news-by-id?id=${data.id}&location=${data.location}`)
+}
 
 export {
     handleLoginApi,
@@ -122,4 +125,5 @@ export {
     getAllSpecialtyById,
     createNews,
     getAllNews,
+    getAllNewsById,
 }
