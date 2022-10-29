@@ -77,7 +77,10 @@ class VerifyEmail extends Component {
                         </div>
                     }
                 </div> */}
-                <Paypal />
+                <div className='w-[40%] m-auto py-[285px]'>
+                    <Paypal />
+                </div>
+
             </>
         );
     }
