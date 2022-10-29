@@ -186,9 +186,8 @@ class ManagePatient extends Component {
                         closePrescriptionModal={this.closePrescriptionModal}
                         sendPrescription={this.sendPrescription}
                     />
-
+                    <ChatMessager />
                 </LoadingOverlay>
-                <ChatMessager />
             </>
         );
     }

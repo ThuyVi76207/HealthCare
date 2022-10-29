@@ -63,7 +63,7 @@ class PrescriptionModal extends Component {
         let { isOpenModel, closePrescriptionModal, dataModal, sendPrescription } = this.props;
         return (
             <Modal isOpen={isOpenModel} toggle={closePrescriptionModal} centered>
-                <ModalHeader toggle={closePrescriptionModal}>Gửi hóa đơn</ModalHeader>
+                <ModalHeader toggle={closePrescriptionModal}>Gửi đơn thuốc</ModalHeader>
                 <ModalBody>
                     <div className="col-6 form-group">
                         <label>Email</label>
