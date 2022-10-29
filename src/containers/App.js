@@ -20,6 +20,7 @@ import RoomContent from './VideoCall3/RoomContent.js';
 import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import Paypal from '../components/Paypal/Paypal';
 import { PayPalButtons, PayPalScriptProvider } from '@paypal/react-paypal-js';
+import DetailNews from './Patient/News/DetailNews';
 
 const initialOptions = {
     "client-id": "AXGWIbw1YJre4l-GsPxWgxjhQC-2b6M8c9-p8lXJ2A0yTOtEPSkEFHNqGBK9zesH0a7AJ6YphVuusxJW",
@@ -73,6 +74,7 @@ class App extends Component {
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
                                     <Route path='/room' component={RoomContent}></Route>
                                     <Route path={path.DETAIL_SPECIALTY} component={DetailSpecialty} />
+                                    <Route path={path.DETAIL_NEWS} component={DetailNews} />
                                     <Route path='/payment/paypal' component={Paypal} />
 
                                 </Switch>

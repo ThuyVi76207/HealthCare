@@ -7,6 +7,7 @@ export const path = {
     DETAIL_DOCTOR: '/detail-doctor/:id',
     DETAIL_SPECIALTY: '/detail-speacilty/:id',
     VERIFY_EMAIL_BOOKING: '/verify-booking',
+    DETAIL_NEWS: '/detail-news/:id',
 
 };
 
