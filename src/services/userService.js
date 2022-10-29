@@ -90,6 +90,12 @@ const postSendSMS = (data) => {
 const getAllSpecialtyById = (data) => {
     return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
 }
+const createNews = (data) => {
+    return axios.post(`/api/create-news`, data)
+}
+const getAllNews = () => {
+    return axios.get(`/api/get-news`)
+}
 
 export {
     handleLoginApi,
@@ -113,5 +119,7 @@ export {
     getAllPatientDoctor,
     postSendPrescription,
     postSendSMS,
-    getAllSpecialtyById
+    getAllSpecialtyById,
+    createNews,
+    getAllNews,
 }

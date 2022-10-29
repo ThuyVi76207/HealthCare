@@ -5,6 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { getAllNews } from '../../../services/userService';
 
 import osteoarthritisImg from "../../../assets/specialty/co_xuong_khop.png";
 import mentalityImg from "../../../assets/specialty/tam-ly.jpg";
@@ -19,7 +20,28 @@ import NewsBlock from './News/NewsBlock';
 
 class News extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataNews: []
+        }
+    }
+    async componentDidMount() {
+        let res = await getAllNews();
+        console.log("Check Specialty", res);
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataSpecialty: res.data ? res.data : []
+            })
+        }
+    }
+    handleViewDeatailSpecialty = (item) => {
+        console.log('View infor:', item)
+        if (this.props.history) {
+            this.props.history.push(`/detail-speacilty/${item.id}`);
+        }
 
+    }
 
     render() {
         let settings = {
@@ -31,6 +53,7 @@ class News extends Component {
             // nextArrow: <SampleNextArrow />,
             // prevArrow: <SamplePrevArrow />
         };
+        let { dataNews } = this.state;
         return (
             <div className='section-news'>
                 <div className='news-container'>
@@ -39,10 +62,23 @@ class News extends Component {
                     </div>
                     <div className='news-body'></div>
                     <Slider {...settings}>
-                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
-                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
-                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
-                        <NewsBlock image={osteoarthritisImg} text={"Xét nghiệm nội tiết bao nhiêu tiền? Xét nghiệm nội tiết thường bao gồm những xét nghiệm lẻ có giá giao động từ 100.000 - 200.000đ"} />
+                        {
+                            dataNews && dataNews.length > 0 &&
+                            dataNews.map((item, index) => {
+                                return (
+
+                                    <div className='mx-2'
+                                        key={index}
+                                        onClick={() => { this.handleViewDeatailSpecialty(item) }}>
+                                        <img src={item.image} alt='' />
+                                        <div className=''> {item.name}</div>
+                                    </div>
+                                )
+                            })
+
+
+                        }
+
                     </Slider>
                 </div>
             </div>
