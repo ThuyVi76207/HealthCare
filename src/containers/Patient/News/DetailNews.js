@@ -9,6 +9,7 @@ import ProfileDoctor from '../Doctor/ProfileDoctor';
 import { getAllNewsById } from '../../../services/userService';
 import _ from 'lodash';
 import { LANGUAGES } from "../../../utils";
+import { convertDateToDateTime } from "../../../functions/index"
 
 class DetailNews extends Component {
     constructor(props) {
@@ -98,13 +99,35 @@ class DetailNews extends Component {
         let { arrDoctorId, dataDetailNews, listProvince } = this.state;
         let { language } = this.props;
         console.log('detailNews', this.state)
+        let imageBase64 = '';
+        if (dataDetailNews.image) {
+            imageBase64 = new Buffer(dataDetailNews.image, 'base64').toString('binary');
+        }
+        let createDate = convertDateToDateTime(dataDetailNews.createdAt);
+        let updateDate = convertDateToDateTime(dataDetailNews.updatedAt);
         return (
             <MaiLayout>
                 <div className='detail-news-container'>
                     <div className='detail-news-body'>
                         {dataDetailNews && !_.isEmpty(dataDetailNews)
                             &&
-                            <div dangerouslySetInnerHTML={{ __html: dataDetailNews.descriptionHTML }}></div>
+                            (
+                                <>
+                                    <h2 className='title-new'>{dataDetailNews.name}</h2>
+                                    <div className='flex mt-2 text-gray-400'>Đã tạo lúc:
+                                        <p className='px-2'>{createDate}</p> - cập nhật lúc: <p className='px-2'>{updateDate}</p>
+                                    </div>
+
+                                    <div
+                                        className='content'
+                                        style={{ backgroundImage: `url(${imageBase64})` }}>
+
+                                    </div>
+
+                                    <div dangerouslySetInnerHTML={{ __html: dataDetailNews.descriptionHTML }}></div>
+                                </>
+                            )
+
 
                         }
                     </div>
