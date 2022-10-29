@@ -46,7 +46,7 @@ class News extends Component {
     render() {
         let settings = {
             dots: true,
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 2000,
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -72,7 +72,7 @@ class News extends Component {
                                     // onClick={() => { this.handleViewDeatailSpecialty(item) }}
                                     >
                                         <img src={item.image} alt='' />
-                                        <div className=''> {item.name}</div>
+                                        <div className='text-center'> {item.name}</div>
                                     </div>
                                 )
                             })
