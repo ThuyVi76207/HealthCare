@@ -4,27 +4,27 @@
     .slick-prev {
 
         // position: relative !important;
-        left: 35px !important;
+        left   : 35px !important;
         z-index: 1000 !important;
-        height: 40px !important;
-        width: 40px !important;
+        height : 40px !important;
+        width  : 40px !important;
         padding: 10px !important;
     }
 
     .slick-next {
-        right: 35px !important;
-        height: 40px !important;
-        width: 40px !important;
+        right  : 35px !important;
+        height : 40px !important;
+        width  : 40px !important;
         padding: 10px !important;
     }
+
     .slick-slide {
         .img-home {
-            width: 100%;
-            max-width: 100%;
-            height: 556px !important;
-            background-size: contain;
+            width            : 100%;
+            max-width        : 100%;
+            height           : 610px !important;
+            background-size  : contain;
             background-repeat: no-repeat;
         }
     }
 }
-

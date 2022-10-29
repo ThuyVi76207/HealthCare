@@ -28,10 +28,10 @@ class News extends Component {
     }
     async componentDidMount() {
         let res = await getAllNews();
-        console.log("Check Specialty", res);
+        console.log("Check New", res);
         if (res && res.errCode === 0) {
             this.setState({
-                dataSpecialty: res.data ? res.data : []
+                dataNews: res.data ? res.data : []
             })
         }
     }
@@ -69,7 +69,8 @@ class News extends Component {
 
                                     <div className='mx-2'
                                         key={index}
-                                        onClick={() => { this.handleViewDeatailSpecialty(item) }}>
+                                    // onClick={() => { this.handleViewDeatailSpecialty(item) }}
+                                    >
                                         <img src={item.image} alt='' />
                                         <div className=''> {item.name}</div>
                                     </div>
