@@ -10,7 +10,7 @@ const ChatBox = () => {
                     <div class="ctrlq fb-close"></div>
                     <div class="fb-page" data-href="https://www.facebook.com/ThuyVi76207" data-tabs="messages" data-width="360" data-height="400" data-small-header="true" data-hide-cover="true" data-show-facepile="false"> </div>
                     <div class="fb-credit">
-                        <a href="https://thanhtrungmobile.vn" target="_blank" rel="sponsored">Powered by TT</a>
+                        <a href="#" target="_blank" rel="sponsored">Powered by TT</a>
                     </div>
                     <div id="fb-root"></div>
                 </div>

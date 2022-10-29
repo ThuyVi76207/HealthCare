@@ -10,7 +10,7 @@ import io from "socket.io-client"
 import "./RoomContent.scss"
 
 
-let socket = io("http://localhost:7777");
+let socket = io("http://localhost:8080");
 
 function RoomContent() {
     const [me, setMe] = useState("")
@@ -157,6 +157,7 @@ function RoomContent() {
                     </div>
                 </div>
                 <a href="/home"><button className="btn btn-primary btn-home">Home</button></a>
+                {/* <Link to={`/home`}><button className="btn btn-primary btn-home">Home</button></Link> */}
             </div>
 
         </>
