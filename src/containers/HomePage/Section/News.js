@@ -62,7 +62,7 @@ class News extends Component {
                                         key={index}
                                         onClick={() => { this.handleViewDeatailNews(item) }}
                                     >
-                                        <img src={item.image} alt='' />
+                                        <img className="img-news" src={item.image} alt='' />
                                         <div className='text-center mt-2'> {item.name}</div>
                                     </div>
                                 )
