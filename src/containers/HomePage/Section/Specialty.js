@@ -7,15 +7,6 @@ import { getAllSpecialty } from '../../../services/userService';
 import { withRouter } from "react-router";
 import { connect } from 'react-redux';
 
-import osteoarthritisImg from "../../../assets/specialty/co_xuong_khop.png";
-import mentalityImg from "../../../assets/specialty/tam-ly.jpg";
-import dermatologyImg from "../../../assets/specialty/da-lieu.jpg";
-import covidImg from "../../../assets/specialty/tu-van-f0.jpg";
-import mentalImg from "../../../assets/specialty/suc-khoe-tam-than.png";
-import digestImg from "../../../assets/specialty/tieu-hoa.jpg";
-import medicalImg from "../../../assets/specialty/noi-khoa.jpg";
-import pediatricImg from "../../../assets/specialty/nhi-khoa.jpg";
-
 
 class Specialty extends Component {
     constructor(props) {
@@ -81,35 +72,6 @@ class Specialty extends Component {
                                 )
                             })
                         }
-
-                        {/* <div className='specialty-customize'>
-                            <img className='img-sp' src={mentalityImg} alt='' />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.mentality" /></div>
-                        </div>
-                        <div className='specialty-customize'>
-                            <img className='img-sp' src={dermatologyImg} alt='' />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.dermatology" /></div>
-                        </div>
-                        <div className='specialty-customize'>
-                            <img className='img-sp' src={covidImg} alt='' />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.covid" /></div>
-                        </div>
-                        <div className='specialty-customize'>
-                            <img className='img-sp' src={mentalImg} />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.mental" /></div>
-                        </div>
-                        <div className='specialty-customize'>
-                            <img className='img-sp' src={digestImg} alt='' />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.digest" /></div>
-                        </div>
-                        <div className='specialty-customize'>
-                            <img className='img-sp' src={medicalImg} alt='' />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.medical" /></div>
-                        </div>
-                        <div className='specialty-customize'>
-                            <img className='img-sp' src={pediatricImg} alt='' />
-                            <div className='text-specialty'><FormattedMessage id="homeheader.pediatric" /></div>
-                        </div> */}
                     </Slider>
                 </div>
             </div>

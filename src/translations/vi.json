@@ -22,7 +22,10 @@
         "pediatric": "Nhi khoa",
         "doctors": "Các bác sĩ nổi bật",
         "news": "Cẩm nang",
-        "Health-Care": "Cung cấp phương pháp công nghệ hóa việc chăm sóc sức khỏe. Theo dõi sức khỏe cá nhân một cách thường xuyên. Cầu nối giúp rút ngắn khoảng cách giữa bác sĩ và bệnh nhân."
+        "Health-Care": "Cung cấp phương pháp công nghệ hóa việc chăm sóc sức khỏe. Theo dõi sức khỏe cá nhân một cách thường xuyên. Cầu nối giúp rút ngắn khoảng cách giữa bác sĩ và bệnh nhân.",
+        "footer-content": "Đội ngũ gồm những người đam mê với mục tiêu là cải thiện cuộc sống của mọi người.",
+        "footer-share": "Chia sẻ",
+        "find-keyword": "Tìm từ khóa khám bệnh"
     },
     "menu": {
         "admin": {
@@ -113,6 +116,30 @@
             "select-payment": "Chọn phương thức thanh toán",
             "select-provice": "Chọn tỉnh thành",
             "specialty": "Chọn chuyên khoa"
+        },
+        "manage-specialty": {
+            "title": "Quản lý chuyên khoa",
+            "name": "Tên chuyên khoa",
+            "image": "Ảnh chuyên khoa"
+        },
+        "manage-news": {
+            "title": "Quản lý bài đăng",
+            "name": "Tên bài đăng",
+            "image": "Ảnh bài đăng",
+            "save": "Lưu"
+        },
+        "manage-patient": {
+            "title": "Quản lý bệnh nhân",
+            "date": "Chọn ngày khám",
+            "serial": "STT",
+            "datetime": "Thời gian",
+            "fullname": "Họ tên",
+            "address": "Địa chỉ",
+            "phonenumber": "Số điện thoại",
+            "action": "Action",
+            "submit": "Xác nhận",
+            "delete": "Xóa",
+            "no-date": "Không có dữ liệu khám vào ngày này"
         }
     }
 }

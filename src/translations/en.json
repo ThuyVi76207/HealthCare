@@ -22,7 +22,10 @@
         "pediatric": "Pediatrics",
         "doctors": "Outstanding Doctors",
         "news": "News",
-        "Health-Care": "Provide a method to technologyize operational work. Monitor personal health on a regular basis. Bridges help shorten the distance between doctors and patients."
+        "Health-Care": "Provide a method to technologyize operational work. Monitor personal health on a regular basis. Bridges help shorten the distance between doctors and patients.",
+        "footer-content": "We are a team of passionate people whose goal is to improve everyone's life.",
+        "footer-share": "Share",
+        "find-keyword": "Find keywords for medical examination"
     },
     "menu": {
         "admin": {
@@ -113,6 +116,30 @@
             "select-payment": "Select Payment",
             "select-provice": "Select Provider",
             "specialty": "Specialty"
+        },
+        "manage-specialty": {
+            "title": "Specialized Management",
+            "name": "Specialist Name",
+            "image": "Specialist Image"
+        },
+        "manage-news": {
+            "title": "News Management",
+            "name": "News Name",
+            "image": "News Image",
+            "save": "Save"
+        },
+        "manage-patient": {
+            "title": "Patient Management",
+            "date": "Date",
+            "serial": "Number",
+            "datetime": "Date Time",
+            "fullname": "Full Name",
+            "address": "Address",
+            "phonenumber": "Phone Number",
+            "action": "Action",
+            "submit": "Submit",
+            "delete": "Delete",
+            "no-date": "No data"
         }
     }
 }

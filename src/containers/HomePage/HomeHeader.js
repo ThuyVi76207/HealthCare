@@ -27,7 +27,7 @@ class HomeHeader extends Component {
                 </div>
 
                 <div className='nav-bar'>
-                    
+
                     <div className='change-language'>
                         <div className={language === LANGUAGES.VI ? 'language-vi action' : 'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN /</span></div>
                         <div className={language === LANGUAGES.EN ? 'language-en action' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
@@ -38,7 +38,7 @@ class HomeHeader extends Component {
                     <div className='title2'><FormattedMessage id="homeheader.title2" /></div>
                     <div className='search'>
                         <i className='fas fa-search'></i>
-                        <input type='text' placeholder='Tim tu khoa kham benh' />
+                        <input type='text' placeholder="Tìm từ khóa khám bệnh" />
                     </div>
                 </div>
 
