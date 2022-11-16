@@ -140,6 +140,14 @@
             "submit": "Xác nhận",
             "delete": "Xóa",
             "no-date": "Không có dữ liệu khám vào ngày này"
+        },
+        "table-manage-user": {
+            "firstName": "Tên",
+            "lastName": "Họ",
+            "email": "Email",
+            "address": "Địa chỉ",
+            "phonenumber": "Số điện thoại",
+            "action": "Action"
         }
     }
 }

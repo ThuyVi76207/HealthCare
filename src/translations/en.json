@@ -140,6 +140,14 @@
             "submit": "Submit",
             "delete": "Delete",
             "no-date": "No data"
+        },
+        "table-manage-user": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "address": "Address",
+            "phonenumber": "Phone Number",
+            "action": "Action"
         }
     }
 }
