@@ -10,7 +10,7 @@ export default function SearchBox() {
                 <i className='pl-1'>
                     <ion-icon name="search-outline"></ion-icon>
                 </i>
-                <input type='text' placeholder='Tim tu khoa kham benh' />
+                <input type='text' placeholder="Tìm từ khóa khám bệnh" />
             </div>
         </div>
     )

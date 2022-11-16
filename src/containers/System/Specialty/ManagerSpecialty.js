@@ -6,6 +6,7 @@ import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import { createNewSpecialty } from '../../../services/userService';
 import { toast } from 'react-toastify'
+import { FormattedMessage } from 'react-intl';
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 class ManagerSpecialty extends Component {
@@ -75,20 +76,20 @@ class ManagerSpecialty extends Component {
     render() {
         return (
             <div className='manage-specialty-container'>
-                <div className='ms-title'>Quản lý chuyên khoa</div>
+                <div className='ms-title'><FormattedMessage id="admin.manage-specialty.title" /></div>
                 {/* <div className='btn-add-new-specialty'>
                     <button>Add new</button>
                 </div> */}
                 <div className='add-new-specialty row'>
                     <div className='col-6 form-group'>
-                        <label className='mb-[5px] text-[1.1rem] font-medium'>Tên chuyên khoa</label>
+                        <label className='mb-[5px] text-[1.1rem] font-medium'><FormattedMessage id="admin.manage-specialty.name" /></label>
                         <input className='form-control' type='text'
                             value={this.state.name}
                             onChange={(event) => this.handleOnChangeInput(event, 'name')}
                         />
                     </div>
                     <div className='col-6 form-group'>
-                        <label className='mb-[5px] text-[1.1rem] font-medium'>Ảnh chuyên khoa</label>
+                        <label className='mb-[5px] text-[1.1rem] font-medium'><FormattedMessage id="admin.manage-specialty.image" /></label>
                         <input className='form-control-file block text-[14px] m-[5px]'
                             type='file' onChange={(event) => this.handleOnChangeImage(event, 'image')}
                         />
