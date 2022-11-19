@@ -75,8 +75,8 @@ class DetailNews extends Component {
                             (
                                 <>
                                     <h2 className='title-new'>{dataDetailNews.name}</h2>
-                                    <div className='flex mt-2 text-gray-400'>Đã tạo lúc:
-                                        <p className='px-2'>{createDate}</p> - cập nhật lúc: <p className='px-2'>{updateDate}</p>
+                                    <div className='flex mt-2 text-gray-400'><FormattedMessage id="admin.news.created-at" />
+                                        <p className='px-2'>{createDate}</p><FormattedMessage id="admin.news.updated-at" /><p className='px-2'>{updateDate}</p>
                                     </div>
 
                                     <div

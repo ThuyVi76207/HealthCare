@@ -8,7 +8,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 import Peer from "simple-peer"
 import io from "socket.io-client"
 import "./RoomContent.scss"
-
+import { FormattedMessage } from 'react-intl';
 
 let socket = io("http://localhost:8080");
 
@@ -98,7 +98,7 @@ function RoomContent() {
     return (
         <>
             <div className="video-container">
-                <h1>Clinic Video</h1>
+                <h1><FormattedMessage id="room.room-name" /></h1>
                 <div className="container-call-video">
                     <div className="video-container">
                         <div className="video">
@@ -113,7 +113,7 @@ function RoomContent() {
                     <div className="myId">
                         <TextField
                             id="filled-basic"
-                            label="Name"
+                            label="Tên người dùng"
                             variant="filled"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
@@ -121,13 +121,13 @@ function RoomContent() {
                         />
                         <CopyToClipboard text={me} style={{ marginBottom: "2rem" }}>
                             <Button variant="contained" color="primary" startIcon={<AssignmentIcon fontSize="large" />}>
-                                Copy ID
+                                <FormattedMessage id="room.room-id" />
                             </Button>
                         </CopyToClipboard>
 
                         <TextField
                             id="filled-basic"
-                            label="ID to call"
+                            label="Mã phòng"
                             variant="filled"
                             value={idToCall}
                             onChange={(e) => setIdToCall(e.target.value)}
@@ -135,7 +135,7 @@ function RoomContent() {
                         <div className="call-button">
                             {callAccepted && !callEnded ? (
                                 <Button variant="contained" color="secondary" onClick={leaveCall}>
-                                    End Call
+                                    <FormattedMessage id="room.end-call" />
                                 </Button>
                             ) : (
                                 <IconButton color="primary" aria-label="call" onClick={() => callUser(idToCall)}>
@@ -148,15 +148,15 @@ function RoomContent() {
                     <div className="user-caller">
                         {receivingCall && !callAccepted ? (
                             <div className="caller">
-                                <h1 >{name} is calling...</h1>
+                                <h1 >{name} <FormattedMessage id="room.user-call" /></h1>
                                 <Button variant="contained" color="primary" onClick={answerCall}>
-                                    Answer
+                                    <FormattedMessage id="room.answer" />
                                 </Button>
                             </div>
                         ) : null}
                     </div>
                 </div>
-                <a href="/home"><button className="btn btn-primary btn-home">Home</button></a>
+                <a href="/home"><button className="btn btn-primary btn-home"><FormattedMessage id="room.home" /></button></a>
                 {/* <Link to={`/home`}><button className="btn btn-primary btn-home">Home</button></Link> */}
             </div>
 
