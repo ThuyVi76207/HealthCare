@@ -46,6 +46,14 @@
             "manage-clinic": "Online Clinic"
         }
     },
+    "room": {
+        "room-name": "Clinic Video",
+        "room-id": "Create ID Room",
+        "end-call": "End Call",
+        "user-call": " is calling...",
+        "answer": "Answer",
+        "home": "Home"
+    },
     "manage-user": {
         "add": "CREATE A NEW USER",
         "email": "Email",
@@ -148,6 +156,16 @@
             "address": "Address",
             "phonenumber": "Phone Number",
             "action": "Action"
+        },
+        "prescription": {
+            "send": "Send Prescription",
+            "choose": "Choose Prescription",
+            "save": "Save",
+            "close": "Close"
+        },
+        "news": {
+            "created-at": "Created At: ",
+            "updated-at": "- Updated At: "
         }
     }
 }

@@ -46,6 +46,14 @@
             "manage-clinic": "Phòng khám Online"
         }
     },
+    "room": {
+        "room-name": "Phòng khám Video",
+        "room-id": "Tạo mã phòng",
+        "end-call": "Kết thúc",
+        "user-call": " đang gọi ...",
+        "answer": "Trả lời",
+        "home": "Trang chủ"
+    },
     "manage-user": {
         "add": "THÊM MỚI NGƯỜI DÙNG",
         "email": "Email",
@@ -148,6 +156,16 @@
             "address": "Địa chỉ",
             "phonenumber": "Số điện thoại",
             "action": "Action"
+        },
+        "prescription": {
+            "send": "Gửi đơn thuốc",
+            "choose": "Chọn đơn thuốc",
+            "save": "Lưu",
+            "close": "Đóng"
+        },
+        "news": {
+            "created-at": "Đã tạo lúc: ",
+            "updated-at": "- cập nhật lúc: "
         }
     }
 }
