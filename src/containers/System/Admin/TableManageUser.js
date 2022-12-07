@@ -55,12 +55,12 @@ class TableManageUser extends Component {
                 <table id="tableManageUser">
                     <tbody>
                         <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Email</th>
-                            <th>Address</th>
-                            <th>Phone</th>
-                            <th>Action</th>
+                            <th><FormattedMessage id="admin.table-manage-user.firstName" /></th>
+                            <th><FormattedMessage id="admin.table-manage-user.lastName" /></th>
+                            <th><FormattedMessage id="admin.table-manage-user.email" /></th>
+                            <th><FormattedMessage id="admin.table-manage-user.address" /></th>
+                            <th><FormattedMessage id="admin.table-manage-user.phonenumber" /></th>
+                            <th><FormattedMessage id="admin.table-manage-user.action" /></th>
                         </tr>
                         {arrUsers && arrUsers.length > 0 &&
                             arrUsers.map((item, index) => {

@@ -1,5 +1,6 @@
 import React from "react";
 import './Footer.scss';
+import { FormattedMessage } from 'react-intl';
 import logoWhite from '../../assets/Hcare-white.svg';
 const Footer = () => {
     return (
@@ -7,9 +8,9 @@ const Footer = () => {
             <div className="footer-up">
                 <img src={logoWhite} className='h-[4.8rem] w-[25%]' />
                 <div className="footer-conten">
-                    <p>We are a team of passionate people whose goal is to improve everyone's life.</p>
+                    <p><FormattedMessage id="homeheader.footer-content" /></p>
                     <div className="footer-share">
-                        <h5>Share</h5>
+                        <h5><FormattedMessage id="homeheader.footer-share" /></h5>
                         <ion-icon name="logo-facebook"></ion-icon>
                         <ion-icon name="logo-twitter"></ion-icon>
                         <ion-icon name="logo-linkedin"></ion-icon>

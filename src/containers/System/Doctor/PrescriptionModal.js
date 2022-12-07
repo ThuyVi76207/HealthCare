@@ -63,7 +63,7 @@ class PrescriptionModal extends Component {
         let { isOpenModel, closePrescriptionModal, dataModal, sendPrescription } = this.props;
         return (
             <Modal isOpen={isOpenModel} toggle={closePrescriptionModal} centered>
-                <ModalHeader toggle={closePrescriptionModal}>Gửi đơn thuốc</ModalHeader>
+                <ModalHeader toggle={closePrescriptionModal}><FormattedMessage id="admin.prescription.send" /></ModalHeader>
                 <ModalBody>
                     <div className="col-6 form-group">
                         <label>Email</label>
@@ -72,15 +72,15 @@ class PrescriptionModal extends Component {
                         />
                     </div>
                     <div className="col-6 form-group">
-                        <label>Chọn đơn thuốc</label>
+                        <label><FormattedMessage id="admin.prescription.choose" /></label>
                         <input className="form-control-file" type="file"
                             onChange={(event) => this.handleOnChangeImage(event)}
                         />
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    <Button className="px-3 bg-orange-500 border-none hover:bg-orange-600" onClick={() => this.handleSendPrescription()}>Save</Button>{' '}
-                    <Button className="px-3 bg-gray-400 border-none hover:bg-gray-600" onClick={closePrescriptionModal}>Close</Button>
+                    <Button className="px-3 bg-orange-500 border-none hover:bg-orange-600" onClick={() => this.handleSendPrescription()}><FormattedMessage id="admin.prescription.save" /></Button>{' '}
+                    <Button className="px-3 bg-gray-400 border-none hover:bg-gray-600" onClick={closePrescriptionModal}><FormattedMessage id="admin.prescription.close" /></Button>
                 </ModalFooter>
             </Modal>
         );

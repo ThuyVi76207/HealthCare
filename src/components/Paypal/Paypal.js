@@ -47,8 +47,7 @@ export default function Paypal() {
                         ],
                     })
                     .then((orderId) => {
-                        console.log(orderId) // cái ID này là mã giao dịch trên paypal trả về để em lưu sau này check với bên nó thì tới đây em xử lý tạo
-                        // đơn trên hệ thống mình kèm với ID này hiểu ý khum dạ em hiểu roogi __ thì em sửa lại component cộn với style lại chỗ payapal là oke nghen. Dạ cảm ơn anh nhiều nha
+                        console.log(orderId)
                         // Your code here after create the order
                         return orderId;
                     });

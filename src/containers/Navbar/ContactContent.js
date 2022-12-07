@@ -2,7 +2,7 @@ import "./ContactContent.scss"
 import { MdOutlineEmail } from "react-icons/md"
 import { RiMessengerLine, RiInstagramLine } from "react-icons/ri"
 import emailjs from "emailjs-com"
-
+import { FormattedMessage } from 'react-intl';
 import React, { useRef } from "react";
 import MaiLayout from "../../layouts/MaiLayout";
 
@@ -23,7 +23,7 @@ const ContactContent = () => {
                     {/* <div className="contact-title">Contact Information</div> */}
                     <div className="container contact_container">
                         <div className="contact_options">
-                            <h2>HEADTH <br />CARE</h2>
+                            <h2>HEALTH <br />CARE</h2>
                             <div className="">
                                 <i className="contact_option">
                                     <ion-icon name="logo-facebook"></ion-icon>
